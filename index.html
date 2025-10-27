@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampfkunstcentrum Dortmund - Wing Chun & Krav Maga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="kampfkunst_brutalism_theme.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #dc2626;
+            --secondary: #f59e0b;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-300: #d4d4d4;
+            --gray-600: #525252;
+            --gray-800: #262626;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif !important;
+            line-height: 1.6 !important;
+            color: var(--dark) !important;
+            background: var(--light) !important;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif !important;
+            font-weight: 600 !important;
+            line-height: 1.2 !important;
+        }
+
+        h1 { font-size: 3.5rem !important; }
+        h2 { font-size: 2.5rem !important; }
+        h3 { font-size: 2rem !important; }
+        h4 { font-size: 1.5rem !important; }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1555597673-b21d5c935865?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light);
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem !important;
+            margin-bottom: 1rem;
+            color: var(--light) !important;
+        }
+
+        .hero p {
+            font-size: 1.25rem !important;
+            margin-bottom: 2rem;
+            color: var(--light) !important;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--light);
+        }
+
+        .btn-primary:hover {
+            background: #b91c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-gray {
+            background: var(--gray-100);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: var(--dark) !important;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: var(--gray-600) !important;
+            font-size: 1.125rem !important;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* Card */
+        .card {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+        }
+
+        .card h3 {
+            color: var(--primary) !important;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--gray-600) !important;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: var(--light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-cell {
+            padding: 1.5rem;
+        }
+
+        .comparison-cell:first-child {
+            background: #fef2f2;
+            border-right: 1px solid var(--gray-200);
+        }
+
+        .comparison-cell:last-child {
+            background: #fffbeb;
+        }
+
+        .comparison-cell h4 {
+            color: var(--primary) !important;
+            margin-bottom: 0.5rem;
+        }
+
+        /* List */
+        .check-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .check-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .check-list li:before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Quote */
+        .quote {
+            font-size: 1.5rem !important;
+            font-style: italic !important;
+            text-align: center !important;
+            color: var(--primary) !important;
+            margin: 3rem 0 !important;
+            padding: 2rem !important;
+            border-left: 4px solid var(--primary) !important;
+            background: var(--gray-100) !important;
+        }
+
+        /* Testimonials */
+        .testimonial {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial p {
+            font-style: italic !important;
+            color: var(--dark) !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .testimonial-author {
+            font-weight: 600 !important;
+            color: var(--primary) !important;
+        }
+
+        /* Training Schedule */
+        .schedule-table {
+            width: 100%;
+            background: var(--light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .schedule-table th {
+            background: var(--dark);
+            color: var(--light) !important;
+            font-weight: 600 !important;
+        }
+
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .schedule-table .available {
+            color: #16a34a !important;
+            font-weight: 600 !important;
+        }
+
+        .schedule-table .full {
+            color: var(--primary) !important;
+            font-weight: 600 !important;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: var(--light);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer p {
+            color: var(--gray-300) !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem !important; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .comparison-row { grid-template-columns: 1fr; }
+            .comparison-cell:first-child { border-right: none; border-bottom: 1px solid var(--gray-200); }
+            .nav-menu { display: none; }
+            h1 { font-size: 2rem !important; }
+            h2 { font-size: 1.75rem !important; }
+            h3 { font-size: 1.5rem !important; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">KAMPFKUNSTCENTRUM DORTMUND</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#wing-chun" class="nav-link">Wing Chun</a></li>
+                <li><a href="#krav-maga" class="nav-link">Krav Maga</a></li>
+                <li><a href="#frauen" class="nav-link">Für Frauen</a></li>
+                <li><a href="#ueber-mich" class="nav-link">Über mich</a></li>
+                <li><a href="#training" class="nav-link">Training</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Kampfkunstcentrum Dortmund</h1>
+            <p>Fachschule für Wing Chun und Krav Maga<br>by Sifu Göksel Erdogan</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#probetraining" class="btn btn-primary">Probetraining anfragen</a>
+                <a href="#vergleich" class="btn btn-secondary">Mehr erfahren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Willkommen Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Herzlich Willkommen im Kampfkunstcentrum Dortmund</h2>
+                <p>Lernen Sie uns kennen</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 2rem; text-align: center;">Wenn Sie lernen wollen…</h3>
+                <ul class="check-list">
+                    <li>in alltäglichen Lebenslagen selbstsicherer aufzutreten</li>
+                    <li>gelassener auf stressige Situationen zu reagieren</li>
+                    <li>sich in bedrohlichen Situationen effektiv zu verteidigen</li>
+                    <li>bewusst im Hier und Jetzt zu sein und sich auf eine Sache zu konzentrieren</li>
+                </ul>
+                <p style="text-align: center; font-size: 1.25rem; margin-top: 2rem; font-weight: 600;">…dann sind Sie hier genau richtig!</p>
+                <p style="margin-top: 2rem; text-align: center;">Wing Chun und Krav Maga zählen zu den effektivsten Selbstverteidigungssystemen der Welt. Die Techniken sind hochwirkungsvoll – dadurch haben selbst körperlich überlegene Gegner keine Chance. Dadurch eignen sich beide Systeme hervorragend für Frauen, Kinder und Senioren.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vergleich Section -->
+    <section id="vergleich" class="section section-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Wing Chun vs. Krav Maga</h2>
+                <p>Hier sehen Sie auf einen Blick, inwiefern sich Wing Chun und Krav Maga voneinander unterscheiden</p>
+            </div>
+            <div class="comparison-table">
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <h4>Wing Chun</h4>
+                    </div>
+                    <div class="comparison-cell">
+                        <h4>Krav Maga</h4>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <p>Erlernen der Grundtechniken: mindestens 6 Monate</p>
+                    </div>
+                    <div class="comparison-cell">
+                        <p>Erlernen der Grundtechniken: mindestens 3 Monate</p>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <p>Keine sportlichen Voraussetzungen erforderlich, für jedes Alter und Geschlecht geeignet</p>
+                    </div>
+                    <div class="comparison-cell">
+                        <p>Normale körperliche und psychische Belastbarkeit</p>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <p>Komplexes System, dessen Techniken aufeinander aufbauen und ineinander fließen</p>
+                    </div>
+                    <div class="comparison-cell">
+                        <p>Einfache Techniken, die auf natürlichen Reflexen beruhen</p>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <p>Reduzierte, effiziente Bewegungen</p>
+                    </div>
+                    <div class="comparison-cell">
+                        <p>Reines Selbstverteidigungssystem mit Kampfelementen</p>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">
+                        <p>Enthält meditative Elemente, die ausgleichend und beruhigend wirken</p>
+                    </div>
+                    <div class="comparison-cell">
+                        <p>Körperliche Fitness und Kondition wird nebenbei trainiert</p>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">Im Kampfkunstcentrum werden Werte wie Respekt, Zusammenhalt und Vertrauen gelehrt und gelebt. Es herrscht eine familiäre Atmosphäre, in der Sie abschalten und alltäglichen Stress abbauen können. Sie entwickeln ein gesundes Selbstwertgefühl und gehen aus dem regelmäßigen Training mit einer gestärkten Persönlichkeit hervor.</p>
+        </div>
+    </section>
+
+    <!-- Wing Chun Section -->
+    <section id="wing-chun" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Wing Chun</h2>
+                <p class="quote">"Kämpfen lernen, um nicht kämpfen zu müssen"</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Was ist Wing Chun?</h3>
+                <p style="margin-bottom: 1rem;"><strong>Wing Chun</strong> ist ein südchinesischer Kampfkunststil, bei dem einfache physikalische Gesetze verwendet werden, um sich auch gegen einen körperlich überlegenen Gegner effektiv verteidigen zu können. Dadurch ist die Kampfkunst besonders gut für <strong>Frauen, Kinder und ältere Menschen</strong> geeignet.</p>
+                <p style="margin-bottom: 1rem;">Die Kampfkunst gilt als eine der wirkungsvollsten Nahkampfsysteme der Welt, denn mit minimalem Kraftaufwand können maximale Effekte im Kampf erzielt werden. Das Konzept des Wing Chun beruht nicht auf roher Kraft, sondern auf <strong>Intuition</strong>. Ziel ist es, den Gegner in kürzester Zeit außer Gefecht zu setzen.</p>
+                <p style="margin-bottom: 1rem;">Wing Chun verfolgt einen ganzheitlichen Ansatz, bei dem Körper und Geist gleichermaßen geschult werden. Die Folge: wer regelmäßig trainiert, kann sich nicht nur selbst verteidigen, sondern erlangt darüber hinaus <strong>mehr Selbstsicherheit in allen Lebenslagen</strong> sowie eine bessere Körperwahrnehmung.</p>
+                <p style="margin-bottom: 2rem;">Darüber hinaus vermittelt Wing Chun Werte wie Respekt, Zusammenhalt und Verantwortung. Das stärkt die soziale Kompetenz und kann die persönliche Entwicklung nachhaltig positiv beeinflussen. Im Gegensatz zu vielen anderen Kampfsportarten gibt es beim Wing Chun <strong>keine Turniere oder Wettkämpfe</strong>.</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Für wen ist Wing Chun geeignet?</h3>
+                <p style="margin-bottom: 1rem;">Wing Chun eignet sich hervorragend für Frauen und Männer jeden Alters sowie für Kinder. Warum? Weil beim Wing Chun <strong>kein hoher Kraftaufwand</strong> notwendig ist, um sich erfolgreich – auch gegen einen körperlich überlegenen Gegner – verteidigen zu können.</p>
+                <p style="margin-bottom: 2rem;">Bei der Kampfkunst kommt es eher auf <strong>Technik, Schnelligkeit und Konzentration</strong> an. Wing Chun eignet sich daher für jeden, der bereit ist, sich auf seinen Körper einzulassen und seinen individuellen Stärken kennenzulernen und zu nutzen.</p>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <a href="#probetraining" class="btn btn-primary">Zum Probetraining</a>
+                </div>
+
+                <h3 style="margin-bottom: 1.5rem;">Welche körperlichen Voraussetzungen braucht man für Wing Chun?</h3>
+                <p style="margin-bottom: 2rem;">Die Bewegungsabläufe im Wing Chun sind unkompliziert, leicht erlernbar und benötigen <strong>keine besonderen physischen Voraussetzungen</strong>. Auch Personen, die noch nie Sport gemacht haben, können die Kampfkunst erlernen und ausüben.</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Wie lange dauert es, Wing Chun zu lernen?</h3>
+                <p style="margin-bottom: 2rem;">Es dauert <strong>mindestens sechs Monate</strong>, bis Sie die Grundtechniken des Wing Chun verstehen. Voraussetzung ist, dass Sie mindestens zweimal pro Woche zum Training kommen und motiviert sind, die Kampfkunst zu lernen. Das System ist sehr komplex und es gehört eine gewisse Disziplin dazu, wenn Sie es erlernen möchten.</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Welche Wirkung hat Wing Chun?</h3>
+                <p style="margin-bottom: 1rem;">Durch Wing Chun können Sie sich wirkungsvoll gegen körperliche Angriffe verteidigen. Aber nicht nur das: Sie stärken gleichzeitig Ihr Selbstvertrauen und lernen, gelassener und ausgeglichener auf herausfordernde Lebenssituationen zu reagieren.</p>
+                <p style="margin-bottom: 1rem;">Sie verspüren <strong>mehr Lebensenergie</strong>, <strong>bauen Stress ab und verbessern Ihre körperliche Fitness</strong>. Ihr inneres Gleichgewicht wird wieder hergestellt und Sie fühlen sich körperlich und mental entspannt.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Weitere Wirkungen von Wing Chun:</h4>
+                <ul class="check-list">
+                    <li>Mehr Geduld im Alltag</li>
+                    <li>Geschärfte Reaktionsfähigkeit</li>
+                    <li>Mehr Verantwortungsbewusstsein</li>
+                    <li>Erhöhte Willenskraft</li>
+                    <li>Mehr Entschlossenheit</li>
+                    <li>Erhöhte soziale Kompetenz</li>
+                    <li>Mehr Selbstsicherheit in herausfordernden Situationen</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wing Chun Training -->
+    <section class="section section-gray">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Wie ist das Wing Chun Training aufgebaut?</h3>
+                <p style="margin-bottom: 1rem;">Wing Chun ist ein komplexes System, dessen Techniken aufeinander aufbauen und ineinander übergehen. Das Training beginnt mit der Aufstellung und einer gegenseitigen Begrüßung, um sich auf das Training einzustimmen.</p>
+
+                <div class="grid grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h4>1. Die erste Form</h4>
+                        <p>Zu Beginn laufen alle Schüler gemeinsam die erste Form. Sie bildet das Grundgerüst des Wing Chun und beinhaltet alle Bewegungsmuster, die im System vorkommen. Diese Übung steigert die Konzentration, der Alltagsstress fällt ab.</p>
+                    </div>
+                    <div class="card">
+                        <h4>2. Reflextraining</h4>
+                        <p>Die körpereigenen Reflexe werden geschult. Dabei wird mit Händen und Fäusten so schnell wie möglich gegen ein Schlagpolster gehauen. Das Training dauert etwa zehn Minuten.</p>
+                    </div>
+                    <div class="card">
+                        <h4>3. Techniktraining</h4>
+                        <p>Eine Technik aus der ersten Form wird ausgewählt und anhand dieser Abwehr und Konter trainiert. Diese Übung kann zwischen fünfzehn und dreißig Minuten dauern.</p>
+                    </div>
+                    <div class="card">
+                        <h4>4. Situationstraining</h4>
+                        <p>Eine reale Angriffssituation wird simuliert. Diese Übung dient dazu, auch im Ernstfall alle Techniken korrekt anwenden zu können. Sifu Oliver Heyden geht individuell auf jeden Einzelnen ein.</p>
+                    </div>
+                    <div class="card">
+                        <h4>5. Freie Selbstverteidigung</h4>
+                        <p>Die Schüler üben freie Angriffe und merken, wie gut sie sich schon selbstverteidigen können. Die Wing Chun Techniken sind selbst bei körperlich Überlegenen effektiv.</p>
+                    </div>
+                    <div class="card">
+                        <h4>6. Cool Down</h4>
+                        <p>Der Körper wird runtergefahren und das Erlebte nochmal reflektiert. Die Aufmerksamkeit ist nach innen auf den Atem gerichtet und man kommt in einen meditationsähnlichen Zustand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wing Chun Geschichte -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Wing Chun Geschichte</h3>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Wann ist Wing Chun entstanden?</h4>
+                <p style="margin-bottom: 1rem;">Wing Chun entstand nach dem Fall der Ming-Dynastie (1368-1644) in China um ca. 1650. Der mündlichen Überlieferung nach Großmeisters Yip Man zufolge, geht das traditionelle Wing Chun zurück auf das südliche Shaolin-Kloster in der chinesischen Provinz Fujian.</p>
+                <p style="margin-bottom: 1rem;">Die Mönche des Shaolin-Klosters waren bekannt für ihre kämpferischen Fähigkeiten. Die Qing-Truppen versuchten zunächst erfolglos, das Kloster zu zerstören. Erst durch einen Verrat gelang es ihnen, das Kloster bis auf die Grundmauern zu zerstören.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Die fünf legendären Großmeister</h4>
+                <p style="margin-bottom: 0.5rem;">Die Überlebenden verteilten sich über das ganze Land und unter ihnen waren fünf Großmeister:</p>
+                <ul style="margin-bottom: 2rem; margin-left: 2rem;">
+                    <li>Die buddhistische Nonne Ng Mui (Wu Mei)</li>
+                    <li>Meister Chi-Sin (Chi Shin)</li>
+                    <li>Meister Fung Do Tak</li>
+                    <li>Meister Pak Mei</li>
+                    <li>Meister Miu Hin</li>
+                </ul>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Die Nonne Ng Mui</h4>
+                <p style="margin-bottom: 1rem;">Eine weitere Überlieferung besagt, dass die Nonne Ng Mui die Kampfkunst entwickelte, nachdem sie einen Kampf zwischen einem Kranich und einer Schlange beobachtete. Sie wollte eine Kampftechnik entwickeln, mit der sie sich erfolgreich gegen überlegene Angreifer wehren konnte.</p>
+                <p style="margin-bottom: 1rem;">Der Kranich hatte stets seine Brustseite der Schlange zugewandt. Jedes Mal, wenn die Schlange ihn angreifen wollte, wehrte der Kranich mit seinem Flügel ab und führte Gegenangriffe mit seinem Schnabel aus. Ng Mui entwickelte daraus eine neue Kampftechnik mit flexiblen Bewegungen, hohem Praxisbezug und effizientem Krafteinsatz.</p>
+                <p style="margin-bottom: 2rem;">Sie gab ihr Wissen an eine junge Frau namens Yim Wing Chun weiter, welche die neue Kampfkunsttechnik erfolgreich anwendete. So wurde die Kampfkunst nach der tapferen Frau benannt.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Neuere Geschichte - Yip Man</h4>
+                <p style="margin-bottom: 1rem;">Die weltweit bekanntesten Wing Chun Stile gehen auf den Kampfkünstler <strong>Yip Man</strong> (*1893 in Foshan – † 1972 in Hongkong) zurück. Er war der letzte Großmeister im Wing Chun. Yip Mans berühmtester Schüler war <strong>Bruce Lee</strong>, der nach Amerika auswanderte und dort Elemente des Wing Chun verwendete.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Werdegang von Yip Man</h4>
+                <p style="margin-bottom: 1rem;">Yip Man kommt mit elf Jahren das erste Mal mit Wing Chun in Berührung. In seinem Heimatort Foshan (China) wird er zwei Jahre lang von seinem Sifu Chan Wah Shun in der Kampfkunst ausgebildet. Im Alter von fünfzehn Jahren verlässt Yip Man seine Heimat, um in Hongkong zur Schule zu gehen.</p>
+                <p style="margin-bottom: 2rem;">Am 1. Oktober 1949 entsteht die kommunistische Volksrepublik China und Yip Man muss Foshan verlassen. Um sich seinen Lebensunterhalt zu verdienen, beginnt er erstmals Wing Chun zu unterrichten. Er unterrichtet Wing Chun weiterhin in Hongkong bis zu seinem Tod am 2. Dezember 1972.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Was ist ein Sifu?</h4>
+                <p style="margin-bottom: 1rem;">Der Begriff Shifu (Sifu) setzt sich zusammen aus den beiden Silben Shi für Lehrer und Fu für Vater und bedeutet so viel wie väterlicher Lehrer oder väterlicher Meister. In den chinesischen Kampfkünsten bekundet die Bezeichnung den besonderen Respekt vor dem Lehrer als väterlichem Meister.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wing Chun System -->
+    <section class="section section-gray">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Das System - Wing Chun Techniken</h3>
+                <p style="margin-bottom: 1rem;">Bei allen Wing Chun Techniken wird nicht etwa mit reiner Muskelkraft gearbeitet, sondern die Elastizität des eigenen Körpers wird geschickt genutzt: schnelle Streckbewegungen werden mit Gewichtsverlagerungen kombiniert. Die Bewegungen sind einfach und flexibel, haben aber eine große Wirkung.</p>
+                <p style="margin-bottom: 2rem;">Der sogenannte <strong>Kettenfauststoß</strong> ist charakteristisch für einige Wing-Chun-Stile: eine Selbstverteidigungstechnik, bei der mehrere Faustschläge pro Sekunde ausgeführt werden. Ein geübter Wing-Chun-Kämpfer kann acht bis zehn Schläge pro Sekunde ausführen.</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Wing Chun Prinzipien</h3>
+                <p style="margin-bottom: 1rem;">Im Wing Chun gibt es keine Regeln, wie es häufig in anderen Kampfsportarten der Fall ist – stattdessen wird hier in Prinzipien gedacht und nach ihnen gehandelt. Es wird jeweils zwischen vier Kraft- und Kampfprinzipien unterschieden.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Die vier Kraftprinzipien</h4>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h4>1. Mach Dich frei von Deiner eigenen Kraft</h4>
+                        <p>Dieses Kraft-Prinzip beruht auf dem Ansatz der vollständigen Entspannung. Nur im entspannten Zustand ist man fähig, schnell und kraftvoll auf einen Angriff zu reagieren.</p>
+                    </div>
+                    <div class="card">
+                        <h4>2. Mach Dich frei von der Kraft deines Gegners</h4>
+                        <p>Die Kraft des Angreifers ins Leere laufen lassen und nicht versucht, dagegen zu drücken. Auch emotional befreit man sich von der Kraft des Gegners.</p>
+                    </div>
+                    <div class="card">
+                        <h4>3. Verwende die Kraft des Gegners gegen ihn selbst</h4>
+                        <p>Die Energie des Angreifers wird geborgt und gegen ihn verwendet. Man lässt einen Faustschlag durch eine Wendung ins Leere laufen.</p>
+                    </div>
+                    <div class="card">
+                        <h4>4. Füge zur gegnerischen Kraft Deine eigene Kraft hinzu</h4>
+                        <p>Der Angriff wird mit der eigenen Kraft verstärkt, wodurch ein doppelter Krafteffekt entsteht.</p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 3rem; margin-bottom: 1rem;">Die vier Kampfprinzipien</h4>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h4>1. Ist der Weg frei, stoße vor</h4>
+                        <p>Dem Angreifer mit einer selbstsicheren Haltung entgegentreten. Die Arme werden vor den Körper geschoben, um zu signalisieren: „Ich bin kein Opfer!"</p>
+                    </div>
+                    <div class="card">
+                        <h4>2. Ist der Weg versperrt, bleibe kleben</h4>
+                        <p>Falls das Kampfziel nicht erreicht werden kann, zieht man sich nicht zurück, sondern „bleibt kleben" und bietet ständigen Widerstand.</p>
+                    </div>
+                    <div class="card">
+                        <h4>3. Ist der Gegner zu stark, gib nach</h4>
+                        <p>Wenn der Druck des Gegners zu stark wird, sollte man nachgeben – beispielsweise indem man ausweicht. Die eigene Kraft wird niemals unnötig verschwendet.</p>
+                    </div>
+                    <div class="card">
+                        <h4>4. Zieht sich der Gegner zurück, folge ihm</h4>
+                        <p>Die eigene Position sollte niemals aufgegeben werden, selbst wenn der Angreifer sich zurückzieht.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wing Chun Formen -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Wing Chun Formen</h3>
+                <p style="margin-bottom: 2rem;">Die Formen sind die Grundlage des Wing Chun – es handelt sich hierbei um feste Bewegungsabläufe und Techniken, die jeder Schüler alleine (ohne Partner) ausführt. Sie vermitteln die Grundtheorien und Gedanken der Kampfkunst.</p>
+
+                <div class="grid grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h4>Siu Lim Tau / Siu Nim Tao</h4>
+                        <p><em>"Die kleine Idee"</em></p>
+                        <p>Die erste Form ist die grundlegende Idee, auf der das ganze System des Wing Chun aufbaut. Die Achtsamkeit wird nach innen gelenkt und äußere Ablenkungen ausgeblendet. Ziel ist, ein grundlegendes Verständnis für die Bewegungsmöglichkeiten des eigenen Körpers zu erlangen.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Chum Kiu / Cham Kiu</h4>
+                        <p><em>"Eine Brücke bauen"</em></p>
+                        <p>Die zweite Form lehrt den Schüler, mit den Armen eine Distanz (Brücke) zum Gegner aufzubauen. Diese Bewegungen werden auch als Defensivtechniken bezeichnet, da sie darauf abzielen, einen Angriff abzuwehren um gleichzeitig zu kontern.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Biu Gee / Biu Tze</h4>
+                        <p><em>"Stechende Finger"</em></p>
+                        <p>Diese Form wird oft als Notfall-Technik bezeichnet. Der Schüler lernt, sich mit Offensivtechniken im Kampf aus einer scheinbar aussichtslosen Lage zu befreien. Dabei kommen gefährliche Techniken zum Einsatz, die nur vertrauenswürdigen Schülern beigebracht werden.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Muk Yan Jong / Mok Jan Chong</h4>
+                        <p><em>"Holzpuppenform"</em></p>
+                        <p>Diese Form wird an einer Holzpuppe (Wooden Dummy) trainiert. Die Puppe dient dazu, die Techniken aus den bisherigen Formen zu perfektionieren. Der Wing Chun Schüler schärft beim Training sein Distanzgefühl zum Gegner.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Luk Dim Boon Kwan</h4>
+                        <p><em>"Langstock-Form"</em></p>
+                        <p>Bei der ersten Waffenform wird mit einem elastischen Holzstab (2-3 Meter) trainiert. Mit dem Trainingsgerät verbessert der Schüler nicht nur seine Körperhaltung, sondern lernt auch, seine Kraft richtig einzusetzen.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Bart Cham Do / Baat Jaam Dao</h4>
+                        <p><em>"Doppelmesser-Form"</em></p>
+                        <p>Die höchste und letzte Form im Wing Chun. Hierbei wird ein bewusster Umgang mit Waffen vermittelt und die bereits erlernten Formen werden vertieft. Bei den Doppelmessern handelt es sich um stumpfe Kurzschwerter.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Chi Sao im Wing Chun</h3>
+                <p style="margin-bottom: 1rem;">Das <strong>Chi Sao</strong> Training ist ein Alleinstellungsmerkmal im Wing Chun. Es schult die eignen Reflexe und ermöglicht dadurch eine besonders schnelle Ausführung der Techniken. Der Wing Chun Schüler lernt, die Bewegungsabläufe des Gegners zu erfühlen und sich so intuitiv vor Angriffen zu schützen.</p>
+                <p style="margin-bottom: 1rem;">Chi Sao heißt so viel wie <strong>klebende Hände</strong> und wird von Praktizierenden oft als die <strong>Seele des Wing Chun</strong> bezeichnet.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Wie wird Chi Sao ausgeführt?</h4>
+                <p style="margin-bottom: 2rem;">Das Chi Sao ist eine Partnerübung, bei der sich zwei Übende gegenüber stehen und abwechselnd den Arm- und Handbewegungen des jeweils anderen folgen. Während der eine Partner drückende Bewegungen ausführt, erspürt der andere diese. Wichtig ist, dass der Kontakt der Arme nicht unterbrochen wird. Ziel ist es, den Tastsinn zu steigern und die Reflexe so weit zu schulen, dass man intuitiv auf Angriffe reagieren kann.</p>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Wing Chun Graduierungen</h3>
+                <p style="margin-bottom: 1rem;">Im ursprünglichen Wing Chun Unterricht gab es keine Graduierungen. Das Graduierungssystem ist vor allem deshalb entstanden, weil heutzutage ein Sifu oft viele Schüler gleichzeitig unterrichten muss.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Schülergrade</h4>
+                <p style="margin-bottom: 1rem;">Es gibt in der Regel 12 Schülergrade im Wing Chun. Der Wing Chun Schüler erlernt hier die erste, zweite und dritte Form und wie er diese erfolgreich im Chi Sao und im Freikampf anwendet.</p>
+                <ul style="margin-bottom: 1rem; margin-left: 2rem;">
+                    <li>Schülergrad 1-2: Siu Lim Tao</li>
+                    <li>Schülergrad 3-4: Siu Lim Tao</li>
+                    <li>Schülergrad 5-6: Chum Kiu</li>
+                    <li>Schülergrad 7-8: Chum Kiu</li>
+                    <li>Schülergrad 9-10: Biu Gee</li>
+                    <li>Schülergrad 11-12: Biu Gee</li>
+                </ul>
+                <p style="margin-bottom: 2rem;">Normalerweise dauert es rund drei bis vier Jahre, bis ein Schüler alle 12 Grade versteht – vorausgesetzt, er kommt zwei bis dreimal pro Woche zum Training.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Ausbildergrade</h4>
+                <p style="margin-bottom: 2rem;">Bei den Ausbildergraden liegt besonderes Augenmerk auf der korrekten Anwendung der vierten Form, sowie den beiden Waffenformen. Wer beide Ausbildergrade erreicht hat, ist ein Sifu. Es dauert etwa vier bis fünf Jahre, das komplette Wing Chun System zu durchlaufen.</p>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Wing Chun für Kinder und Jugendliche</h3>
+
+                <div class="grid grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h4>Kinder (6-10 Jahre)</h4>
+                        <p>Über Rollenspiele lernen Kinder im Wing Chun, sich in bedrohlichen Situationen richtig zu verhalten und entwickeln so ein gesundes Selbstbewusstsein. Sie lernen auch, sich auf eine Aufgabe zu konzentrieren und sich durch nichts ablenken zu lassen. Im Kampfkunstcentrum Dortmund werden Werte wie Disziplin, Respekt und Zusammenhalt vermittelt.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Jugendliche (11-14 Jahre)</h4>
+                        <p>Jugendliche entwickeln durch regelmäßiges Wing Chun Training ein starkes Selbstbewusstsein und lernen selbstsicher aufzutreten. Neben einer effektiven Selbstverteidigung lernen die Jugendlichen auch, den Fokus auf eine Aufgabe zu lenken und äußere Reize auszublenden. Sie bekommen dadurch einen gigantischen Mehrwert – auch fürs spätere Berufsleben.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <a href="#probetraining" class="btn btn-primary">Wing Chun testen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Krav Maga Section -->
+    <section id="krav-maga" class="section section-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Krav Maga</h2>
+                <p>Effektive Selbstverteidigung - Schnell erlernbar</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Was ist Krav Maga?</h3>
+                <p style="margin-bottom: 1rem;"><strong>Krav Maga</strong> ist ein modernes, hocheffizientes Selbstverteidigungssystem, das ursprünglich für die israelische Armee entwickelt wurde. Die Techniken sind einfach und extrem wirkungsvoll – dadurch ist Krav Maga besonders schnell erlernbar.</p>
+                <p style="margin-bottom: 1rem;">Der wesentliche Unterschied zu anderen Kampfsportarten: beim Krav Maga gibt es weder festgelegte Bewegungsabläufe, noch Wettkampfregeln. Es ist ein reines Selbstverteidigungssystem mit dem Ziel, sich schnell aus einer bedrohlichen Situation befreien zu können.</p>
+                <p style="margin-bottom: 2rem;">Ein weiterer Bestandteil des Krav Maga Trainings ist, Gefahren rechtzeitig zu erkennen und durch bedachtes Verhalten einen Konflikt zu vermeiden (Gewaltprävention und Deeskalation). Das oberste Ziel im Krav Maga ist es, die körperliche und geistige Gesundheit zu schützen.</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Was bringt Krav Maga?</h3>
+                <p style="margin-bottom: 1rem;">Durch Krav Maga lernen Sie, Gefahrensituation frühzeitig zu erkennen und zu vermeiden. Sie können sich im Ernstfall effektiv selbst verteidigen und bekommen mehr Selbstsicherheit und Selbstbewusstsein in allen Lebenslagen.</p>
+                <p style="margin-bottom: 1rem;">Weil Krav Maga auf natürlichen Reflexen unseres Körpers beruht, ist das Nahkampfsystem besonders leicht zu erlernen und funktioniert auch unter hohem Stress.</p>
+                <p style="margin-bottom: 2rem;">Das israelische Nahkampfsystem ist auch für kleinere, zierliche Menschen gut geeignet, da die Techniken hocheffektiv sind. Somit bietet <strong>Krav Maga besonders für Frauen eine effektive Selbstverteidigung</strong> und vermittelt selbstsicheres Auftreten in bedrohlichen Situationen.</p>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <a href="#probetraining" class="btn btn-primary">Krav Maga ausprobieren</a>
+                </div>
+
+                <h3 style="margin-bottom: 1.5rem;">Welche Voraussetzungen braucht man?</h3>
+                <p style="margin-bottom: 2rem;">Krav Maga ist für jedes Alter und jedes Geschlecht geeignet. Die einzige Voraussetzung: eine <strong>normale körperliche und psychische Belastbarkeit</strong>. Wer beispielsweise traumatische körperliche Übergriffe erlebt hat, muss dies unbedingt vorab Trainer Oliver Heyden mitteilen. Denn das Szenarientraining ist sehr realitätsnah und kann unverarbeitete Traumata verstärken.</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Wie schnell lernt man Krav Maga?</h3>
+                <p style="margin-bottom: 1rem;">Für alle, die Krav Maga lernen wollen, gibt es eine gute Nachricht: Das israelische Selbstverteidigungssystem ist nicht nur äußerst wirkungsvoll in der Anwendung, sondern auch <strong>schnell und leicht zu erlernen</strong>. Es dauert maximal drei Monate, bis Sie die gelernten Griffe und Techniken anwenden können. Voraussetzung ist, dass Sie regelmäßig zum Training kommen, also zweimal pro Woche.</p>
+                <p style="margin-bottom: 2rem;">Die Bewegungen im Krav Maga sind einfach und das hat auch seinen Grund: Bei einem unerwarteten Angriff muss man sich unter hohem Adrenalin effektiv verteidigen können. Dazu braucht es einfach Bewegungsabläufe statt komplexe Verbiegungen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Krav Maga Training -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Krav Maga Training</h3>
+                <p class="quote">"Ich lehre lieber eine Technik, die funktioniert, als zehn Techniken, die nicht funktionieren"</p>
+                <p style="margin-bottom: 2rem;">Das Krav Maga Training im Kampfkunstcentrum Dortmund zeichnet sich durch eine hohe Anzahl an Wiederholungen aus. Bei Trainer Oliver gilt das Motto <strong>'Weniger ist mehr'</strong>. Erst wenn man eine Technik wirklich beherrscht, kann man sie auch in der Praxis erfolgreich anwenden.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1.5rem;">Ablauf des Krav Maga Trainings</h4>
+                <p style="margin-bottom: 2rem;">Das Besondere am Krav Maga Training ist, dass Sie unter professioneller Aufsicht so nah wie möglich an eine reale Gefahrensituation herangeführt werden. Das macht das Training nicht nur besonders intensiv, sondern auch sehr effektiv. Sie lernen Angriffe abzuwehren, die völlig unerwartet kommen.</p>
+
+                <div class="grid grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h4>1. Aufwärmen</h4>
+                        <p>Bevor das Training losgeht, wird der Körper etwa zehn bis fünfzehn Minuten lang mit Kraft- und Dehnübungen aufgewärmt. Dann folgt eine Atemübung, durch die man runterfährt und voll im Hier und Jetzt ankommt.</p>
+                    </div>
+                    <div class="card">
+                        <h4>2. Techniktraining</h4>
+                        <p>Bei dieser Partnerübung lernt man, eine Technik erfolgreich auszuführen. Hier wird ein Angriff simuliert, den man abblockt und sich mit einem Konterangriff wehrt. Die jeweilige Technik wird etwa dreißig Minuten lang geübt.</p>
+                    </div>
+                    <div class="card">
+                        <h4>3. Stressdrill</h4>
+                        <p>Hierbei wird der Körper künstlich unter Stress gesetzt. Auf Kommando werden unterschiedliche Übungen gefordert: Liegestütze, Schlag- und Trittkombinationen, Kniebeuge. Kurz bevor das körperliche Limit erreicht ist, werden die zuvor geübten Techniken abgerufen.</p>
+                    </div>
+                    <div class="card">
+                        <h4>4. Cool Down</h4>
+                        <p>Das Krav Maga Training endet mit dem Cool Down: hierbei kommen Körper und Geist zur Ruhe und man lässt das Erlebte Revue passieren. Der Körper wird gedehnt und die Muskeln entspannen sich.</p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 3rem; margin-bottom: 1rem;">Kann man sich beim Krav Maga Training verletzen?</h4>
+                <p style="margin-bottom: 2rem;">Während des Unterrichts achtet Trainer Oliver Heyden ganz genau darauf, dass niemand verletzt wird. Als zertifizierter Full Instructor hat er zusätzlich eine Ausbildung zum Ersthelfer gemacht, weil ihm das körperliche und seelische Wohlbefinden seiner Schüler sehr am Herzen liegt. Zusätzlich schützt spezielle Kleidung vor Verletzungen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Krav Maga Geschichte -->
+    <section class="section section-gray">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Woher kommt Krav Maga?</h3>
+                <p style="margin-bottom: 1rem;">Der Begriff <strong>Krav Maga</strong> ist hebräisch und bedeutet übersetzt Kontaktkampf. Der slowakische Boxer <strong>Imrich Lichtenfeld</strong> (* 1910 in Budapest – † 1998 in Israel) gilt als Begründer des israelischen Selbstverteidigungssystems.</p>
+                <p style="margin-bottom: 2rem;">Imrich Lichtenfeld war bekannt für seine kämpferischen Fähigkeiten als Boxer und Ringer. Er gewann in den 1920er und 1930er Jahren etliche nationale und internationale Wettkämpfe und galt als einer der besten Ringer Europas.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Ursprünglich: Schutz der jüdischen Bevölkerung</h4>
+                <p style="margin-bottom: 1rem;">Sein Können hatte Imrich Lichtenfeld unter anderem seinem Vater Samuel zu verdanken: Der Polizist unterrichtete seinen Junior vielfältig in der Selbstverteidigung und brachte ihm die Kampfkunst Jiu-Jitsu bei.</p>
+                <p style="margin-bottom: 1rem;">Als gegen Ende der 1930er Jahre die Anfeindungen gegen Juden immer mehr zunahmen, schloss sich Lichtenfeld mit anderen Juden zusammen und gründete eine Schutztruppe für die jüdische Bevölkerung.</p>
+                <p style="margin-bottom: 1rem;">Um sie erfolgreich vor antisemitischen Übergriffen zu schützen, <strong>entwickelte er ein einzigartiges Nahkampfsystem</strong>, das nur ein Ziel hatte: maximale Wirkung in ernsthaften Bedrohungssituationen. So entstand Krav Maga.</p>
+                <p style="margin-bottom: 2rem;">Im Jahr 1940 wanderte er nach Palästina aus und änderte seinen Nachnamen in die hebräische Variante Sde-Or. Mit der Gründung des Staates Israel im Jahr 1948 erfolgt der Höhepunkt im Leben von Imrich Lichtenfeld: <strong>er wird Nahkampfausbilder der israelischen Armee (IDF)</strong>.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Krav Maga im zivilen Bereich</h4>
+                <p style="margin-bottom: 2rem;">Wer heutzutage Krav Maga lernen will, bekommt natürlich nicht dasselbe beigebracht wie die israelische Armee. Beim Krav Maga lernen Sie, sich in Gefahrensituationen schnellstmöglich effektiv zu verteidigen. Dabei ist es auch erlaubt, Alltagsgegenstände als Waffe einzusetzen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Krav Maga Techniken -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Krav Maga Techniken</h3>
+                <p style="margin-bottom: 1rem;">Krav Maga zielt darauf ab, sich im Alltag blitzschnell effektiv verteidigen zu können – mit allen zur Verfügung stehenden Mitteln. Die Techniken sind <strong>hochagressiv und gefährlich</strong>: harte, schnelle Tritte und Schläge zwischen die Beine oder gegen den Kopf sind beim Krav Maga ganz selbstverständlich.</p>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Beispiele für Abwehrtechniken:</h4>
+                <ul class="check-list">
+                    <li>Tritte gegen die Knie</li>
+                    <li>Schläge gegen den Kopf</li>
+                    <li>Faustschläge gegen das Genick</li>
+                    <li>Tritte und Schläge zwischen die Beine</li>
+                    <li>Fingerstiche in die Augen</li>
+                    <li>Schläge gegen das Kinn</li>
+                </ul>
+
+                <p style="margin-top: 2rem; margin-bottom: 1rem;">Die Krav Maga Techniken sind einfach auszuführen und beruhen auf natürlichen Reflexen. Dadurch sind sie auch in Extremsituationen und unter hohem psychischen Druck anwendbar und leicht zu merken.</p>
+                <p style="margin-bottom: 2rem;">Eine weitere Besonderheit im Krav Maga ist, das <strong>Abwehr und Angriff meist zeitgleich</strong> stattfinden. Durch den Überraschungseffekt hat der Gegner kaum eine Chance, erneut anzugreifen.</p>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Alltagsgegenstände als Waffen</h3>
+                <p style="margin-bottom: 1.5rem;">Im Krav Maga werden Alltagsgegenstände wie Regenschirme, Taschenlampen oder Tassen als Waffen genutzt, um sich erfolgreich gegen Angreifer zu wehren. Die Gegenstände werden eingeteilt in:</p>
+
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h4>Stockartige Gegenstände</h4>
+                        <p>Regenschirme, Zeitung, Tennisschläger, Besenstiele, Äste – hiermit kann der Gegner aus sicherer Distanz bekämpft oder seine Angriffe abgeblockt werden.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Schildartige Gegenstände</h4>
+                        <p>Stühle, Mülleimerdeckel, Taschen, Polster, Koffer – diese Objekte schützen vor Schlägen oder Tritten. Sie sind nicht dafür gedacht, den Gegner zu verletzen.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Messerartige Gegenstände</h4>
+                        <p>Lineal, Messer, Löffel, Stifte – werden auf mittlerer Distanz eingesetzt, um den Gegner an freiliegenden Körperstellen zu verletzen.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Steinartige Gegenstände</h4>
+                        <p>Tasse, Trinkglas, Steine, Handy, Schlüsselbund – diese massiven Gegenstände werden als Schlagwerkzeug gegen den Kopf oder andere empfindliche Körperstellen eingesetzt.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Kleine Objekte</h4>
+                        <p>Schlüssel, Feuerzeuge, kleine Plastikdosen, Taschenlampen – eignen sich ideal, um den Angreifer abzulenken oder kurzzeitig zu blenden.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Flüssigkeiten</h4>
+                        <p>(Heißes) Wasser, Tee, Kaffee, Deodorant, Parfum – setzen den Angreifer für einen Moment außer Gefecht. Solche Momente eignen sich ideal, um die Flucht zu ergreifen.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Gewaltprävention</h3>
+                <p style="margin-bottom: 1rem;">Die Gewaltprävention ist ebenfalls Teil des Krav Maga Unterrichts. Hier geht es darum – wie der Name schon sagt – gewalttätige Auseinandersetzungen zu vermeiden.</p>
+                <p style="margin-bottom: 2rem;">Sie lernen, bedrohliche Situationen rechtzeitig zu erkennen und sich in diesem Moment so zu verhalten, dass es gar nicht erst zum Kampf kommt. Krav Maga selbst sollte nur dann angewendet werden, wenn alle vorherigen Schutzmaßnahmen versagen.</p>
+                <p class="quote">"Ein vermiedener Kampf ist ein gewonnener Kampf"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deeskalation -->
+    <section class="section section-gray">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem;">Deeskalation im Krav Maga</h3>
+                <p style="margin-bottom: 2rem;">Deeskalation ist ein essentieller Bestandteil im Krav Maga Training. Dabei geht es darum, sich in einer hochgeschaukelten Situation so zu verhalten, dass eine Eskalation vermieden wird. Dieser Zeitpunkt wird im Krav Maga auch als <strong>Pre-Conflict-Phase (Vorkonfliktphase)</strong> bezeichnet.</p>
+
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h4>Innere Haltung</h4>
+                        <p>Die innere Haltung spielt eine entscheidende Rolle bei der Deeskalation. Denn wer selbstsicher auftritt, strahlt das auch aus. Der potentielle Angreifer spürt, dass er sich lieber nicht mit Ihnen anlegen sollte.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Verbale Deeskalation</h4>
+                        <p>Bei der verbalen Deeskalation geht es um das, was man tatsächlich zum potentiellen Angreifer sagt. Indem Sie ruhig bleiben und langsam sprechen, verhalten Sie sich auf verbaler Ebene deeskalierend.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Nonverbale Deeskalation</h4>
+                        <p>"Man kann nicht nicht kommunizieren." Für die Deeskalation im Krav Maga ist es wichtig, die richtigen Signale zu senden. Beispielsweise sollte der Blickkontakt zum Gegner gehalten werden, ohne zu starren. Eine entspannte Körperhaltung einnehmen.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Paraverbale Deeskalation</h4>
+                        <p>Hiermit geht es darum, WIE etwas gesagt wird. Der Ton spielt eine entscheidende Rolle dabei, wie sich der Konflikt entwickelt. Eine ruhige, leise Stimme kann auf den potentiellen Angreifer entspannend wirken.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Kinder- und Jugendtraining im Krav Maga</h3>
+
+                <div class="grid grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h4>Kinder (6-10 Jahre)</h4>
+                        <p>Krav Maga für Kinder unterscheidet sich erheblich vom Erwachsenenunterricht. Es geht hier vor allem um die Stärkung der Persönlichkeit. Die Kinder gehen aus dem Krav Maga Training mit einem gestärkten Selbstbewusstsein hervor. Sie lernen, Gefahrensituationen rechtzeitig zu erkennen und sich effektiv daraus zu befreien.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Jugendliche (11-14 Jahre)</h4>
+                        <p>Im Krav Maga können sich Jugendliche im geschützten Rahmen so richtig auspowern und angestaute Aggressionen abbauen. Die Jugendlichen lernen "NEIN" zu sagen und die eigene Grenze festzulegen. Auch Themen wie Mobbing, die Gefahren von Alkohol und Drogen werden im Unterricht besprochen.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <a href="#probetraining" class="btn btn-primary">Jetzt Probetraining vereinbaren</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selbstverteidigung für Frauen -->
+    <section id="frauen" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Effektive Selbstverteidigung für Frauen in Dortmund</h2>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <p style="margin-bottom: 2rem; font-size: 1.125rem;">Es ist Nacht und Sie gehen alleine im Dunkeln durch einen verlassenen Park. Plötzlich hören Sie hinter sich Schritte. Sie drehen sich um und sehen eine dunkle, große Gestalt hinter sich. Ihr Puls rast, Sie haben Angst. „Gegen so einen großen Mann habe ich keine Chance", denkt es in Ihnen.</p>
+
+                <h3 style="text-align: center; margin-bottom: 2rem;">So weit muss es nicht kommen!</h3>
+
+                <h4 style="margin-bottom: 1rem;">Im Kampfkunstcentrum Dortmund lernen Sie:</h4>
+                <ul class="check-list">
+                    <li>Bedrohliche Situationen frühzeitig zu erkennen und zu vermeiden</li>
+                    <li>Selbstsicheres Auftreten in allen Lebenslagen</li>
+                    <li>Effektive Selbstverteidigung – selbst gegen körperlich überlegene Gegner und unter hohem Stress</li>
+                </ul>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Was bringt Selbstverteidigung für Frauen?</h3>
+                <p style="margin-bottom: 1rem;">In vielen Köpfen herrscht bei dem Wort Selbstverteidigung direkt ein Klischee: schwitzende Männer, die sich prügeln. Nicht gerade ein einladender Gedanke für Frauen, die Selbstverteidigung erlernen möchten.</p>
+                <p style="margin-bottom: 1rem;">Dabei haben diese Vorurteile nur sehr wenig mit der Realität zu tun: <strong>Selbstverteidigung zielt nicht aufs Kämpfen ab, sondern darauf, dass es gar nicht erst zum Kampf kommt.</strong> Denn effektive Selbstverteidigung beginnt bereits im Kopf: mit einer starken inneren Haltung und der richtigen Körpersprache.</p>
+                <p style="margin-bottom: 1rem;">Im Kampfkunstcentrum Dortmund lernen Sie deshalb nicht einfach nur Selbstverteidigungstechniken. Denn die beste Technik bringt nichts, wenn Sie im Ernstfall vor Schock wie gelähmt sind. Stattdessen erlangen Sie das Fundament einer effektiven Verteidigung: ein gesundes Selbstbewusstsein und die Fähigkeit, bedrohliche Situationen zu erkennen und zu vermeiden.</p>
+                <p style="margin-bottom: 2rem;">Darüber hinaus lernen Sie unter der professionellen Anleitung von Trainer Oliver Heyden, sich im Ernstfall schnell und effektiv zu verteidigen. Die Techniken sind schnell erlernbar, leicht zu merken und auch unter hohem Stress anwendbar.</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Was ist die beste Selbstverteidigung für Frauen?</h3>
+                <p style="margin-bottom: 2rem;">Wenn Sie Selbstverteidigung lernen wollen, sind Sie im Kampfkunstcentrum Dortmund richtig aufgehoben. Sowohl <strong>Wing Chun</strong> als auch <strong>Krav Maga</strong> eignen sich ideal zur Selbstverteidigung für Frauen. Beide Systeme wurden entwickelt, um sich schnell und effektiv gegen körperlich überlegene Menschen verteidigen zu können.</p>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <a href="#probetraining" class="btn btn-primary">Jetzt Probetraining vereinbaren</a>
+                </div>
+
+                <h3 style="margin-bottom: 1.5rem;">Selbstverteidigung für Frauen – bedeutet das, dass Frauen mit Frauen trainieren?</h3>
+                <p style="margin-bottom: 1rem;">Nein, im Kampfkunstcentrum Dortmund gibt es nur gemischte Gruppen. Wer Selbstverteidigung lernen will, ist in einer reinen Frauengruppe falsch aufgehoben. Zwar ist die Vorstellung, sich gegen einen Mann verteidigen zu müssen, für viele beängstigend. Doch genau diese Situation kommt der Realität am nächsten.</p>
+                <p style="margin-bottom: 1rem;">Selbstverteidigung zu lernen und zu beherrschen bedeutet auch, sich seinen Ängsten zu stellen und diese zu überwinden. Denn erst wenn Sie <strong>Ihren größten Gegner überwältigt</strong> haben, nämlich <strong>SICH SELBST</strong>, erst dann können Sie sich auch einem anderen Gegner stellen.</p>
+                <p style="margin-bottom: 2rem;">Für ein effektives Selbstverteidigungstraining ist es essentiell, den Trainingspartner häufig zu wechseln. Angriffe können nämlich so individuell sein wie der Mensch selbst. Je öfter Sie den Trainingspartner wechseln, desto anpassungsfähiger werden Sie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über mich -->
+    <section id="ueber-mich" class="section section-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Oliver Heyden – Über mich</h2>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <p style="margin-bottom: 1rem; font-size: 1.125rem;">Hallo, ich bin Oliver Heyden, Kampfkunsttrainer für <strong>Wing Chun</strong> und <strong>Krav Maga</strong> mit über 25 Jahren Erfahrung. Bei mir lernen Sie selbstsicheres Auftreten in allen Lebenslagen und effektive Verteidigung in bedrohlichen Situationen.</p>
+                <p style="margin-bottom: 2rem; font-size: 1.125rem;">In meinem Unterricht lehre und lebe ich Werte wie Respekt, Zusammenhalt und Vertrauen. Es herrscht eine <strong>familiäre Atmosphäre</strong>, in der Sie abschalten und alltäglichen Stress abbauen können. Sie entwickeln ein gesundes Selbstwertgefühl und gehen aus regelmäßigem Training mit einer gestärkten Persönlichkeit hervor.</p>
+
+                <p class="quote">"Kampfkunst ist mehr als nur kämpfen"</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Was zeichnet mich als Trainer aus?</h3>
+                <p style="margin-bottom: 1rem;">Für mich steht der Mensch an sich beim Training an erster Stelle. Zu sehen, wie sich jeder Einzelne durch meinen Unterricht weiterentwickelt, ist für mich mehr wert als alles Geld der Welt. Es gibt für mich nichts Schöneres als die <strong>zufriedenen, dankbaren Gesichter</strong> nach jedem Training. Dann weiß ich: Ich habe alles richtig gemacht!</p>
+                <p style="margin-bottom: 2rem;">Als Ausbilder gebe ich nicht nur Tipps zum Training, sondern kümmere mich auf ganzheitlicher Ebene um meine Schüler. Das bedeutet, dass ich auch für emotionale Themen und Belange immer ein offenes Ohr habe.</p>
+
+                <p class="quote">"Ich bin ein Trainer mit Herz, Hirn und Humor"</p>
+
+                <p style="margin-bottom: 1rem;">Die wertvollste Qualifikation, über die ich aus meiner Sicht verfüge, ist meine jahrelange Erfahrung: mehr als 25 Jahre sind es mittlerweile. In dieser Zeit habe ich etliche Kampfsportarten und Kampfkünste ausprobiert. Warum? Ich wollte mir ein eigenes Urteil bilden, welche <strong>Techniken im Ernstfall</strong> wirklich funktionieren.</p>
+
+                <p class="quote">"Wer innere Stärke ausstrahlt, wird auch nicht zum Opfer"</p>
+
+                <p style="margin-bottom: 2rem;">Ich betreibe die beiden Nahkampfsysteme mit Herzblut und Leidenschaft. Mein größter Antrieb ist es, Menschen innerlich zu stärken, sodass Sie selbstbewusst durchs Leben gehen können. Denn wer innere Stärke ausstrahlt, wird in der Regel auch nicht zum Opfer – ob beruflich oder privat.</p>
+
+                <p class="quote">"Bei mir wird jeder individuell in seinen Stärken gefördert"</p>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Meine Auszeichnungen auf einen Blick</h3>
+                <ul class="check-list">
+                    <li>Krav Maga Study Group Leader</li>
+                    <li>Krav Maga Full Instructor</li>
+                    <li>Krav Maga Kids Instructor</li>
+                    <li>Krav Maga Knife Defence Instructor</li>
+                    <li>Krav Maga Stick Instructor</li>
+                    <li>Krav Maga Stellvertretender Landestrainer NRW</li>
+                    <li>Wing Chun "Distinguished Instructor of Year 2018"</li>
+                    <li>Wing Chun Master (6. Dan; Sifu für Kinder, Jugendliche und Erwachsene)</li>
+                </ul>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Weiterbildungen 2020 für Prävention und Wellness</h4>
+                <ul style="margin-bottom: 1rem; margin-left: 2rem;">
+                    <li>Breuss-Massage</li>
+                    <li>Fußreflexzonen-Massage</li>
+                    <li>Gua Sha Massage</li>
+                    <li>Hot Stone Massage</li>
+                    <li>Klassische Ganzkörpermassage</li>
+                    <li>Shiatsu-Massage</li>
+                </ul>
+
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Weiterbildungen 2021 für Prävention und Fitness</h4>
+                <ul style="margin-bottom: 2rem; margin-left: 2rem;">
+                    <li>Fitness-Führerschein</li>
+                    <li>Geprüfter Fitnesstrainer inkl. Fitnesstrainer-Lizenzen A und B</li>
+                    <li>Personal-Trainer-Lizenz (medical fitness)</li>
+                    <li>Ausbildung zum Infektionsschutzhelfer in Unternehmen und Organisationen</li>
+                    <li>Einweisung zum Corona-POC-Testverfahren inkl. Durchführung der Testverfahren</li>
+                    <li>Start Januar 2022 Masterclass Ausbildung GE Ving Tsun</li>
+                </ul>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <a href="#probetraining" class="btn btn-primary">Ich möchte das Training testen</a>
+                </div>
+
+                <h3 style="margin-bottom: 1.5rem;">Wie alles begann…</h3>
+                <p style="margin-bottom: 1rem;">Die Kunst zu kämpfen wurde mir quasi in die Wiege gelegt, denn mein Onkel war Vize-Landesmeister im Karate. Er hat mich regelmäßig mit zu Wettkämpfen mitgenommen und ich durfte ihn zum Training begleiten. Das hat mich als kleiner Junge ganz schön fasziniert!</p>
+                <p style="margin-bottom: 2rem;">Meine Eltern waren von meiner Begeisterung für Kampfsport gar nicht begeistert, wodurch der Reiz für mich umso größer war! Ich begann, heimlich mit meinem besten Freund im Keller Taek Won Do zu trainieren. Ich fühlte mich schon nach wenigen Wochen selbstsicherer, denn ich wusste, dass ich mich bei einem Angriff wehren kann.</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Was mich an der Kampfkunst fasziniert</h3>
+                <p style="margin-bottom: 1rem;">Unsere Gesellschaft scheint durch die digitale Welt immer schnelllebiger zu werden. Jeder ist ständig erreichbar und es fällt zunehmend schwerer, bei sich zu bleiben.</p>
+                <p style="margin-bottom: 1rem;">Die Kampfkunst wirkt wie ein natürliches Heilmittel zu diesem Trend: sie vermittelt längst vergessene Werte wie Zusammenhalt, Respekt und Vertrauen. Insbesondere durch Wing Chun nehme ich eine nachhaltige Veränderung in meinem Leben wahr: Ich setze mich nicht mehr so stark unter Druck und fühle mich allgemein ausgeglichener und entspannter.</p>
+
+                <h3 style="margin-bottom: 1.5rem;">Mein schönster Moment als Kampfkunsttrainer</h3>
+                <p style="margin-bottom: 2rem;">Ich erinnere mich gerne zurück an mein erstes Kindertraining in der Schule von Großmeister Dirk Eiringhaus in Duisburg: nach dem Unterricht kamen zwei Kinder auf mich zu, umarmten mich und sagten „Danke Olli, ich hab dich lieb!" Das war ein unbeschreibliches Gefühl.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Was unsere Schüler sagen</h2>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="testimonial">
+                    <p>"Bei Oliver lernt man relaxt und hat schnell Erfolgserlebnisse. Das Training besteht aus mehreren sich ergänzenden Elementen. Fitness, Taktik, Rechtfragen Partnertraining. Techniken werden engagiert und anschaulich demonstriert und Oliver ist stehts bereit Fragen zu beantworten und hilft auch mehrfach nach wenn etwas nicht klappt. Ich bin begeistert."</p>
+                    <p class="testimonial-author">Tobias E. aus Dortmund</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Mit Olli hat man einen super Trainer! Man lernt gut und schnell, so macht Training Spaß. Mach weiter so!! Danke!!"</p>
+                    <p class="testimonial-author">Rene Dreier aus Duisburg</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Das Training mit Oliver bringt mich körperlich und mental immer wieder in Ausnahmesituationen. Dadurch lerne ich nicht nur viel über Selbstverteidigung, sondern auch viel über mich selber."</p>
+                    <p class="testimonial-author">André Lampe aus Duisburg</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Klasse Sifu mit guter Erfahrung und fachlicher Kompetenz. Hier wird einem die Kampfkunst in familiärer Atmosphäre mit Herzblut vermittelt."</p>
+                    <p class="testimonial-author">Andreas L. aus Dortmund</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Ich bin gerne beim Training mit unserem Sifu Oliver. Es ist mehr als nur Sport. Für mich ist es Technik, kombiniert mit purem Adrenalin. Ich mag das individuelle Training und die praktischen Tipps vom Sifu."</p>
+                    <p class="testimonial-author">Melina D. aus Dortmund</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Das Training Samstags Morgens ist immer lustig und spannend. Olli kommt bei den einzelnen Übungen zu jedem hin, zeigt und erklärt wo Fehler sind. Spiel und Spaß ist immer dabei."</p>
+                    <p class="testimonial-author">Maximilian und Charlotte Tracht aus Duisburg</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Mir gefällt das Training bei Olli sehr gut. Es ist lustig und macht Spaß. Man lernt immer was neues. Konzentration, Ausdauer, Spaß und meine Freunde beim Training sind mir wichtig."</p>
+                    <p class="testimonial-author">Arian Dalgic aus Duisburg</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Das Training ist sehr gut, deckt alles ab was man braucht. Ein Aufwärmprogramm und Techniken die vom Trainer kompetent und individuell vermittelt werden."</p>
+                    <p class="testimonial-author">Marcus P. aus Dortmund</p>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Gutes Training. Sifu Oliver ist immer gut drauf, erklärt und zeigt immer alles mit Ruhe und Geduld. Fragen beim Training werden immer beantwortet. Es macht einfach Spaß bei Ihm zu trainieren. Auch die anderen Schüler sind immer nett und freundlich."</p>
+                    <p class="testimonial-author">Juan P. aus Dortmund</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Schedule -->
+    <section id="training" class="section section-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trainingszeiten</h2>
+                <p>Die angegebenen Plätze sind ab Januar 2025 verfügbar. Es ist nur eine begrenzte Teilnehmerzahl pro Kurs möglich!</p>
+            </div>
+
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Zeit</th>
+                            <th>Kurs</th>
+                            <th>Verfügbarkeit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Montag</td>
+                            <td>17:15 – 18:00 Uhr</td>
+                            <td>Wing Chun Kids (ab 6 – 12 Jahre)</td>
+                            <td class="full">Keine Plätze mehr verfügbar</td>
+                        </tr>
+                        <tr>
+                            <td>Montag</td>
+                            <td>18:15 – 19:15 Uhr</td>
+                            <td>Wing Chun (ab 18 Jahre / Erwachsene)</td>
+                            <td class="full">Keine Plätze mehr verfügbar</td>
+                        </tr>
+                        <tr>
+                            <td>Dienstag</td>
+                            <td>17:15 – 18:00 Uhr</td>
+                            <td>Krav Maga Kids (ab 6 – 13 Jahre)</td>
+                            <td class="full">Keine Plätze mehr verfügbar</td>
+                        </tr>
+                        <tr>
+                            <td>Dienstag</td>
+                            <td>18:15 – 19:00 Uhr</td>
+                            <td>Krav Maga Teens (ab 14 – 17 Jahre)</td>
+                            <td class="available">Noch 4 Plätze frei</td>
+                        </tr>
+                        <tr>
+                            <td>Dienstag</td>
+                            <td>19:15 – 20:15 Uhr</td>
+                            <td>Krav Maga (ab 18 Jahre / Erwachsene)</td>
+                            <td class="available">Noch 4 Plätze frei</td>
+                        </tr>
+                        <tr>
+                            <td>Dienstag</td>
+                            <td>20:30 – 21:30 Uhr</td>
+                            <td>Krav Maga (ab 18 Jahre / Erwachsene)</td>
+                            <td class="available">Noch 4 Plätze frei</td>
+                        </tr>
+                        <tr>
+                            <td>Mittwoch</td>
+                            <td>17:15 – 18:00 Uhr</td>
+                            <td>Wing Chun Kids (ab 6 – 12 Jahre)</td>
+                            <td class="full">Keine Plätze mehr verfügbar</td>
+                        </tr>
+                        <tr>
+                            <td>Mittwoch</td>
+                            <td>18:15 – 19:15 Uhr</td>
+                            <td>Wing Chun (ab 18 Jahre / Erwachsene)</td>
+                            <td class="full">Keine Plätze mehr verfügbar</td>
+                        </tr>
+                        <tr>
+                            <td>Donnerstag</td>
+                            <td>17:15 – 18:00 Uhr</td>
+                            <td>Krav Maga Kids (ab 6 – 13 Jahre)</td>
+                            <td class="full">Keine Plätze mehr verfügbar</td>
+                        </tr>
+                        <tr>
+                            <td>Donnerstag</td>
+                            <td>18:15 – 19:00 Uhr</td>
+                            <td>Krav Maga Teens (ab 14 – 17 Jahre)</td>
+                            <td class="available">Noch 4 Plätze frei</td>
+                        </tr>
+                        <tr>
+                            <td>Donnerstag</td>
+                            <td>19:15 – 20:15 Uhr</td>
+                            <td>Krav Maga (ab 18 Jahre / Erwachsene)</td>
+                            <td class="available">Noch 4 Plätze frei</td>
+                        </tr>
+                        <tr>
+                            <td>Donnerstag</td>
+                            <td>20:30 – 21:30 Uhr</td>
+                            <td>Krav Maga (ab 18 Jahre / Erwachsene)</td>
+                            <td class="available">Noch 4 Plätze frei</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <p style="font-weight: 600; margin-bottom: 1rem;">Das Training / Probetraining findet in unseren Räumlichkeiten statt.</p>
+                    <p>Kampfkunstcentrum Dortmund<br>
+                    Sölder Straße 121 (vor dem Bahnübergang, rechte Seite)<br>
+                    44289 Dortmund</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="section">
+        <div id="probetraining" class="container">
+            <div class="section-title">
+                <h2>Kontakt</h2>
+                <p>Termine werden nur von uns vergeben. Kontakt bitte nur per Mail.</p>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <h3 style="margin-bottom: 1.5rem;">Probetraining anfragen</h3>
+                <p style="margin-bottom: 2rem; font-size: 1.125rem;">
+                    <strong>Email:</strong><br>
+                    <a href="mailto:Probetraining-Kampfkunstcentrum-Dortmund@web.de" style="color: var(--primary); text-decoration: none; font-size: 1.25rem;">
+                        Probetraining-Kampfkunstcentrum-Dortmund@web.de
+                    </a>
+                </p>
+
+                <p style="margin-bottom: 1rem;"><strong>Adresse:</strong></p>
+                <p style="margin-bottom: 2rem;">
+                    Kampfkunstcentrum Dortmund<br>
+                    Sölder Straße 121<br>
+                    (vor dem Bahnübergang, rechte Seite)<br>
+                    44289 Dortmund
+                </p>
+
+                <a href="mailto:Probetraining-Kampfkunstcentrum-Dortmund@web.de" class="btn btn-primary" style="font-size: 1.125rem; padding: 1.25rem 2.5rem;">
+                    Jetzt Probetraining anfragen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kampfkunstcentrum Dortmund. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 1rem;">
+                <a href="#" style="color: var(--light); margin: 0 1rem;">Impressum</a>
+                <a href="#" style="color: var(--light); margin: 0 1rem;">Datenschutz</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
