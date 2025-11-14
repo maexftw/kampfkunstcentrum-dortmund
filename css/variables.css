@@ -1,0 +1,55 @@
+/* Design tokens for Kampfkunstcentrum Dortmund */
+
+:root {
+  /* Palette (OKLCH) */
+  --color-bg: oklch(0.98 0.01 95);
+  --color-panel: oklch(0.96 0.02 95);
+  --color-panel-strong: oklch(0.9 0.04 20);
+  --color-text: oklch(0.23 0.03 260);
+  --color-text-muted: oklch(0.53 0.02 250);
+  --color-border: oklch(0.85 0.02 260);
+  --color-highlight: oklch(0.72 0.11 30);
+  --color-highlight-muted: oklch(0.82 0.07 30);
+  --color-accent: oklch(0.64 0.21 25);
+  --color-accent-strong: oklch(0.58 0.23 25);
+  --color-focus: oklch(0.69 0.18 140);
+
+  /* Typography */
+  --font-display: "Oswald", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --letter-spacing-tight: -0.01em;
+
+  /* Dimensions */
+  --max-width: 1200px;
+  --wrap-padding: clamp(1.25rem, 4vw, 2.5rem);
+  --section-gap: clamp(3rem, 5vw, 5rem);
+  --card-gap: clamp(1rem, 2vw, 1.75rem);
+
+  /* Radius */
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-soft: 0 20px 40px rgba(13, 9, 8, 0.08);
+  --shadow-strong: 0 30px 60px rgba(13, 9, 8, 0.15);
+
+  /* Motion */
+  --ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 160ms;
+  --duration-base: 260ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: oklch(0.18 0.02 260);
+    --color-panel: oklch(0.22 0.02 260);
+    --color-panel-strong: oklch(0.3 0.04 260);
+    --color-text: oklch(0.9 0.02 260);
+    --color-text-muted: oklch(0.72 0.02 250);
+    --color-border: oklch(0.32 0.02 260);
+    --color-highlight: oklch(0.62 0.13 30);
+    --color-highlight-muted: oklch(0.52 0.08 30);
+    --color-accent: oklch(0.72 0.14 25);
+  }
+}
+

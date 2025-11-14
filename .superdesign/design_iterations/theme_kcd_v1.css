@@ -1,0 +1,215 @@
+:root {
+  /* Core Palette (OKLCH) */
+  --kcd-bg: oklch(0.98 0.01 95);
+  --kcd-panel: oklch(0.96 0.02 95);
+  --kcd-panel-strong: oklch(0.9 0.04 20);
+  --kcd-text: oklch(0.23 0.03 260);
+  --kcd-text-muted: oklch(0.53 0.02 250);
+  --kcd-border: oklch(0.85 0.02 260);
+  --kcd-highlight: oklch(0.72 0.11 30);
+  --kcd-highlight-muted: oklch(0.82 0.07 30);
+  --kcd-accent: oklch(0.64 0.21 25);
+  --kcd-accent-strong: oklch(0.58 0.23 25);
+  --kcd-focus: oklch(0.69 0.18 140);
+
+  /* Typography */
+  --font-display: "Oswald", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --letter-spacing-tight: -0.01em;
+
+  /* Sizing + Radius */
+  --section-gap: clamp(3rem, 5vw, 5rem);
+  --card-gap: clamp(1rem, 2vw, 1.75rem);
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-soft: 0 20px 40px rgba(13, 9, 8, 0.08);
+  --shadow-strong: 0 30px 60px rgba(13, 9, 8, 0.15);
+
+  /* Motion */
+  --ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 160ms;
+  --duration-base: 260ms;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--kcd-bg);
+  color: var(--kcd-text);
+}
+
+.kcd-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.announcement-bar {
+  background: var(--kcd-panel-strong);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.announcement-bar a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.hero-shell {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--card-gap);
+  align-items: center;
+  margin-top: var(--section-gap);
+}
+
+.hero-shell h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.hero-badge {
+  background: var(--kcd-panel);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--kcd-border);
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: var(--radius-pill);
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background: var(--kcd-accent);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--duration-fast) var(--ease-snap), box-shadow var(--duration-fast) var(--ease-snap);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
+.button-ghost {
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--kcd-border);
+  background: transparent;
+  color: var(--kcd-text);
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+}
+
+.progress-card {
+  background: linear-gradient(135deg, var(--kcd-highlight-muted), var(--kcd-panel));
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-soft);
+}
+
+.progress-list {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.progress-chip {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-lg);
+  background: white;
+  border: 1px solid var(--kcd-border);
+}
+
+.modules-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--card-gap);
+  margin-top: var(--section-gap);
+}
+
+.module-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  border: 1px solid var(--kcd-border);
+  box-shadow: var(--shadow-soft);
+  min-height: 160px;
+}
+
+.contact-panel {
+  margin-top: var(--section-gap);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: var(--radius-lg);
+  background: var(--kcd-panel);
+  border: 1px solid var(--kcd-border);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--card-gap);
+}
+
+.contact-panel .mailto-chip {
+  background: white;
+  border: 1px dashed var(--kcd-border);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer {
+  margin-top: var(--section-gap);
+  padding: 2rem 0;
+  border-top: 1px solid var(--kcd-border);
+  color: var(--kcd-text-muted);
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.footer a {
+  color: var(--kcd-text);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

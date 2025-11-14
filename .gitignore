@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.log
+
+# Local development
+src-site/
+*.bat
+
+# Keep robots.txt and sitemap.xml
+!robots.txt
+!sitemap.xml
