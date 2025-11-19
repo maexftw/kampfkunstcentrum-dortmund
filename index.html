@@ -1349,15 +1349,15 @@
                 console.log('Only necessary cookies accepted');
             }
 
-            // Check if user has already made a choice
-            const consent = getCookie(COOKIE_NAME);
-            if (!consent) {
-                // Show banner after 1 second
-                setTimeout(showBanner, 1000);
-            }
+            // Initialize cookie banner
+            function initCookieBanner() {
+                // Check if user has already made a choice
+                const consent = getCookie(COOKIE_NAME);
+                if (!consent) {
+                    // Show banner after 1 second
+                    setTimeout(showBanner, 1000);
+                }
 
-            // Event listeners
-            document.addEventListener('DOMContentLoaded', function() {
                 const acceptBtn = document.getElementById('cookie-accept');
                 const declineBtn = document.getElementById('cookie-decline');
 
@@ -1388,7 +1388,15 @@
                         this.style.borderColor = 'rgba(255,255,255,0.3)';
                     });
                 }
-            });
+            }
+
+            // Event listeners - use DOMContentLoaded or run immediately if already loaded
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initCookieBanner);
+            } else {
+                // DOM is already loaded
+                initCookieBanner();
+            }
 
             // Mobile responsive styling
             if (window.innerWidth <= 768) {
