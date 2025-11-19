@@ -129,6 +129,43 @@
             gap: 0.75rem;
         }
 
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            margin-top: 6rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: var(--primary);
+        }
+
+        .footer-text {
+            opacity: 0.7;
+            margin-bottom: 2rem;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
             .nav-container {
                 padding: 1rem 1.25rem;
@@ -345,5 +382,160 @@
             <strong>Stand:</strong> Oktober 2025
         </p>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">KAMPFKUNST <span>DORTMUND</span></div>
+            <p class="footer-text">Fachschule für Ving Tsun und Krav Maga</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kampfkunstcentrum Dortmund. Alle Rechte vorbehalten.</p>
+                <div style="margin-top: 0.5rem;">
+                    <a href="index.html" style="color: var(--gray); text-decoration: none; margin: 0 1rem; font-size: 0.9rem; transition: color 0.3s;">Startseite</a>
+                    <a href="impressum.html" style="color: var(--gray); text-decoration: none; margin: 0 1rem; font-size: 0.9rem; transition: color 0.3s;">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem 2rem; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); z-index: 9999; border-top: 3px solid #dc2626;">
+        <div style="max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.25rem; margin-bottom: 0.5rem; color: #dc2626;">🍪 Cookie-Einstellungen</h3>
+                <p style="font-size: 0.95rem; line-height: 1.5; opacity: 0.9; margin: 0;">
+                    Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Durch die Nutzung unserer Website stimmen Sie der Verwendung von Cookies zu.
+                    <a href="datenschutz.html" style="color: #f59e0b; text-decoration: underline;">Mehr erfahren</a>
+                </p>
+            </div>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button id="cookie-accept" style="background: #dc2626; color: white; padding: 0.875rem 2rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: all 0.3s; white-space: nowrap;">
+                    Alle akzeptieren
+                </button>
+                <button id="cookie-decline" style="background: transparent; color: white; padding: 0.875rem 2rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: all 0.3s; white-space: nowrap;">
+                    Nur notwendige
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Script -->
+    <script>
+        // Cookie Banner Management
+        (function() {
+            const COOKIE_NAME = 'cookie-consent';
+            const COOKIE_DURATION = 365; // days
+
+            function setCookie(name, value, days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                const expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+            }
+
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for(let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            function showBanner() {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) {
+                    banner.style.display = 'block';
+                    // Fade in animation
+                    banner.style.opacity = '0';
+                    banner.style.transform = 'translateY(100%)';
+                    setTimeout(() => {
+                        banner.style.transition = 'opacity 0.4s, transform 0.4s';
+                        banner.style.opacity = '1';
+                        banner.style.transform = 'translateY(0)';
+                    }, 100);
+                }
+            }
+
+            function hideBanner() {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) {
+                    banner.style.opacity = '0';
+                    banner.style.transform = 'translateY(100%)';
+                    setTimeout(() => {
+                        banner.style.display = 'none';
+                    }, 400);
+                }
+            }
+
+            function acceptCookies() {
+                setCookie(COOKIE_NAME, 'accepted', COOKIE_DURATION);
+                hideBanner();
+                // Here you can load analytics or other tracking scripts
+                console.log('Cookies accepted');
+            }
+
+            function declineCookies() {
+                setCookie(COOKIE_NAME, 'declined', COOKIE_DURATION);
+                hideBanner();
+                console.log('Only necessary cookies accepted');
+            }
+
+            // Check if user has already made a choice
+            const consent = getCookie(COOKIE_NAME);
+            if (!consent) {
+                // Show banner after 1 second
+                setTimeout(showBanner, 1000);
+            }
+
+            // Event listeners
+            document.addEventListener('DOMContentLoaded', function() {
+                const acceptBtn = document.getElementById('cookie-accept');
+                const declineBtn = document.getElementById('cookie-decline');
+
+                if (acceptBtn) {
+                    acceptBtn.addEventListener('click', acceptCookies);
+                    // Hover effect
+                    acceptBtn.addEventListener('mouseenter', function() {
+                        this.style.background = '#b91c1c';
+                        this.style.transform = 'translateY(-2px)';
+                        this.style.boxShadow = '0 4px 12px rgba(220, 38, 38, 0.4)';
+                    });
+                    acceptBtn.addEventListener('mouseleave', function() {
+                        this.style.background = '#dc2626';
+                        this.style.transform = 'translateY(0)';
+                        this.style.boxShadow = 'none';
+                    });
+                }
+
+                if (declineBtn) {
+                    declineBtn.addEventListener('click', declineCookies);
+                    // Hover effect
+                    declineBtn.addEventListener('mouseenter', function() {
+                        this.style.background = 'rgba(255,255,255,0.1)';
+                        this.style.borderColor = 'rgba(255,255,255,0.5)';
+                    });
+                    declineBtn.addEventListener('mouseleave', function() {
+                        this.style.background = 'transparent';
+                        this.style.borderColor = 'rgba(255,255,255,0.3)';
+                    });
+                }
+            });
+
+            // Mobile responsive styling
+            if (window.innerWidth <= 768) {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) {
+                    const container = banner.querySelector('div > div');
+                    if (container) {
+                        container.style.flexDirection = 'column';
+                        container.style.alignItems = 'flex-start';
+                    }
+                }
+            }
+        })();
+    </script>
 </body>
 </html>
