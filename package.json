@@ -1,0 +1,19 @@
+{
+  "name": "00-kampfkunst-dortmund",
+  "version": "1.0.0",
+  "description": "**Wing Chun & Krav Maga Kampfkunstschule**",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tinacms dev -c \"astro dev\"",
+    "build": "tinacms build && astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tinacms/cli": "^2.1.9",
+    "astro": "^6.0.2",
+    "tinacms": "^3.6.1"
+  }
+}

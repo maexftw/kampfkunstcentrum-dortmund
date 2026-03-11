@@ -20,3 +20,6 @@ src-site/
 # Keep robots.txt and sitemap.xml
 !robots.txt
 !sitemap.xml
+
+node_modules
+.env
