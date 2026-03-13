@@ -633,6 +633,87 @@
             opacity: 0.95;
         }
 
+        /* Availability Section */
+        .availability-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .availability-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .availability-header {
+            padding: 2rem;
+            background: #1a1a1a;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .availability-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .availability-header h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.75rem;
+            margin: 0;
+        }
+
+        .availability-body {
+            padding: 2rem;
+        }
+
+        .availability-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .availability-item:last-child {
+            border-bottom: none;
+        }
+
+        .group-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .spot-badge {
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .spot-free {
+            background: #ecfdf5;
+            color: #059669;
+        }
+
+        .spot-full {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+
+        @media (max-width: 992px) {
+            .availability-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Footer */
         footer {
             background: var(--dark);
@@ -1297,6 +1378,66 @@
     </section>
 
     <!-- Contact Section -->
+    <!-- Freie Plätze Section -->
+    <section id="verfuegbarkeit">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Aktuelle Kapazitäten</span>
+                <h2 class="section-title">Freie Plätze</h2>
+                <p class="section-description">
+                    Um eine hohe Trainingsqualität zu gewährleisten, sind unsere Plätze pro Gruppe limitiert.
+                    Hier finden Sie die aktuell verfügbaren Kapazitäten für unser Training in Dortmund.
+                </p>
+            </div>
+
+            <div class="availability-grid">
+                <!-- Wing Chun Availability -->
+                <div class="availability-card">
+                    <div class="availability-header">
+                        <div class="availability-icon">🥋</div>
+                        <h3>Wing Chun</h3>
+                    </div>
+                    <div class="availability-body">
+                        <div class="availability-item">
+                            <span class="group-name">Erwachsene (ab 18 J.)</span>
+                            <span class="spot-badge spot-free">1 Platz frei</span>
+                        </div>
+                        <div class="availability-item">
+                            <span class="group-name">Kinder & Jugendliche</span>
+                            <span class="spot-badge spot-free">2 Plätze frei</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Krav Maga Availability -->
+                <div class="availability-card">
+                    <div class="availability-header">
+                        <div class="availability-icon">🛡️</div>
+                        <h3>Krav Maga</h3>
+                    </div>
+                    <div class="availability-body">
+                        <div class="availability-item">
+                            <span class="group-name">Erwachsene (ab 18 J.)</span>
+                            <span class="spot-badge spot-full">Ausgebucht / Warteliste</span>
+                        </div>
+                        <div class="availability-item">
+                            <span class="group-name">Jugendliche (11–14 J.)</span>
+                            <span class="spot-badge spot-free">2 Plätze frei</span>
+                        </div>
+                        <div class="availability-item">
+                            <span class="group-name">Kinder (6–10 J.)</span>
+                            <span class="spot-badge spot-free">2 Plätze frei</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center; color: var(--gray); font-style: italic;">
+                Stand: März 2026. Sichern Sie sich jetzt Ihren Platz für ein kostenloses Probetraining!
+            </div>
+        </div>
+    </section>
+
     <section id="kontakt" style="background: var(--gray-light);">
         <div class="container">
             <div class="section-header">
@@ -1704,15 +1845,15 @@
             </button>
 
             <div style="background: var(--primary); padding: 2rem; color: white; text-align: center;">
-                <h3 style="font-family: 'Oswald', sans-serif; font-size: 2rem; margin-bottom: 0.5rem;">Neujahrs-Special
+                <h3 style="font-family: 'Oswald', sans-serif; font-size: 2rem; margin-bottom: 0.5rem;">Sichere dir deinen Platz
                 </h3>
-                <p style="font-size: 1.1rem; opacity: 0.9;">Starten Sie fit und sicher ins neue Jahr!</p>
+                <p style="font-size: 1.1rem; opacity: 0.9;">Jetzt für ein kostenloses Probetraining anmelden!</p>
             </div>
 
             <div style="padding: 2rem; text-align: center;">
                 <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--dark);">
                     Sichere dir jetzt noch einen der <strong style="color: var(--primary);">letzten freien
-                        Plätze</strong> für unsere Einsteiger-Kurse im Januar.
+                        Plätze</strong> für unsere Einsteiger-Kurse.
                 </p>
 
                 <a href="#kontakt" onclick="document.getElementById('promo-popup').style.display='none'"
