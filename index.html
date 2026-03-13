@@ -310,6 +310,64 @@
             box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
         }
 
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--dark);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                padding: 2rem;
+                transition: right 0.4s ease;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+
         /* Hero Section */
         .hero {
             margin-top: 80px;
@@ -368,6 +426,10 @@
             line-height: 1.1;
             margin-bottom: 1.5rem;
             max-width: 800px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            background: linear-gradient(to right, #fff, #ccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero-subtitle {
@@ -419,9 +481,35 @@
             color: var(--dark);
         }
 
+
+
+        /* Accessibility & Focus */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 8px;
+            z-index: 1001;
+            transition: top 0.3s;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--secondary);
+            outline-offset: 2px;
+        }
+
         /* Section Base */
         section {
             padding: 6rem 2rem;
+            scroll-margin-top: 80px;
         }
 
         .container {
@@ -514,8 +602,18 @@
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(220, 38, 38, 0.15);
+        }
+
+        .comparison-card:hover .card-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
         }
 
         .comparison-card:hover {
@@ -793,12 +891,18 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">KAMPFKUNST <span>DORTMUND</span></a>
+            <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="#" class="logo">KAMPFKUNST <span>DORTMUND</span></a>
             <div class="nav-links">
-                <a href="#willkommen" class="nav-link">Willkommen</a>
                 <a href="#wing-chun" class="nav-link" title="Wing Chun Training in Dortmund">Wing Chun</a>
                 <a href="#krav-maga" class="nav-link" title="Krav Maga Selbstverteidigung Dortmund">Krav Maga</a>
                 <a href="#ueber-mich" class="nav-link" title="Trainer Oliver Heyden">Über mich</a>
@@ -808,7 +912,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="main-content">
         <div class="hero-bg">
             <img src="https://cdn.prod.website-files.com/68d0fbc61ed599b79a1ed0ff/68d1340227c2f2420ad5628a_Martin-Zingel-1-768x576.jpg.jpeg"
                 alt="Wing Chun und Krav Maga Training im Kampfkunstcentrum Dortmund - Selbstverteidigungstraining für Erwachsene, Frauen und Jugendliche"
@@ -1393,7 +1497,7 @@
                         <div>
                             <strong>18:15 – 19:00 Uhr</strong> — Krav Maga Teens (ab 14 – 17 Jahre)
                         </div>
-                        <span style="color: #16a34a; font-weight: 600; font-size: 0.9rem;">noch 4 Plätze frei</span>
+                        <span class="schedule-status" style="color: #16a34a; font-weight: 600; font-size: 0.9rem;"><i aria-hidden="true">✓</i> noch 4 Plätze frei</span>
                     </div>
 
                     <div class="schedule-item"
@@ -1401,7 +1505,7 @@
                         <div>
                             <strong>19:15 – 20:15 Uhr</strong> — Krav Maga (ab 18 Jahre / Erwachsene)
                         </div>
-                        <span style="color: #16a34a; font-weight: 600; font-size: 0.9rem;">noch 4 Plätze frei</span>
+                        <span class="schedule-status" style="color: #16a34a; font-weight: 600; font-size: 0.9rem;"><i aria-hidden="true">✓</i> noch 4 Plätze frei</span>
                     </div>
 
                     <div class="schedule-item"
@@ -1409,7 +1513,7 @@
                         <div>
                             <strong>20:30 – 21:30 Uhr</strong> — Krav Maga (ab 18 Jahre / Erwachsene)
                         </div>
-                        <span style="color: #16a34a; font-weight: 600; font-size: 0.9rem;">noch 4 Plätze frei</span>
+                        <span class="schedule-status" style="color: #16a34a; font-weight: 600; font-size: 0.9rem;"><i aria-hidden="true">✓</i> noch 4 Plätze frei</span>
                     </div>
                 </div>
 
@@ -1460,7 +1564,7 @@
                         <div>
                             <strong>18:15 – 19:00 Uhr</strong> — Krav Maga Teens (ab 14 – 17 Jahre)
                         </div>
-                        <span style="color: #16a34a; font-weight: 600; font-size: 0.9rem;">noch 4 Plätze frei</span>
+                        <span class="schedule-status" style="color: #16a34a; font-weight: 600; font-size: 0.9rem;"><i aria-hidden="true">✓</i> noch 4 Plätze frei</span>
                     </div>
 
                     <div class="schedule-item"
@@ -1468,7 +1572,7 @@
                         <div>
                             <strong>19:15 – 20:15 Uhr</strong> — Krav Maga (ab 18 Jahre / Erwachsene)
                         </div>
-                        <span style="color: #16a34a; font-weight: 600; font-size: 0.9rem;">noch 4 Plätze frei</span>
+                        <span class="schedule-status" style="color: #16a34a; font-weight: 600; font-size: 0.9rem;"><i aria-hidden="true">✓</i> noch 4 Plätze frei</span>
                     </div>
 
                     <div class="schedule-item"
@@ -1476,7 +1580,7 @@
                         <div>
                             <strong>20:30 – 21:30 Uhr</strong> — Krav Maga (ab 18 Jahre / Erwachsene)
                         </div>
-                        <span style="color: #16a34a; font-weight: 600; font-size: 0.9rem;">noch 4 Plätze frei</span>
+                        <span class="schedule-status" style="color: #16a34a; font-weight: 600; font-size: 0.9rem;"><i aria-hidden="true">✓</i> noch 4 Plätze frei</span>
                     </div>
                 </div>
             </div>
@@ -1522,6 +1626,42 @@
                     });
                 }
             });
+        });
+
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // Reveal Animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
         });
 
         // Navbar scroll effect
