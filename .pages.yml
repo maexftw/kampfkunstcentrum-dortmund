@@ -188,9 +188,10 @@ content:
                 type: select
                 default: frei
                 options:
-                  - { label: "Plätze frei", value: "frei" }
-                  - { label: "Ausgebucht / Warteliste", value: "warteliste" }
-                  - { label: "Ausgebucht", value: "ausgebucht" }
+                  values:
+                    - { name: "frei", label: "Plätze frei" }
+                    - { name: "warteliste", label: "Ausgebucht / Warteliste" }
+                    - { name: "ausgebucht", label: "Ausgebucht" }
               - { name: spotsAvailable, label: Freie Plätze (nur bei „Plätze frei“), type: number, required: false }
               - { name: spotsText, label: Platztext (optional, wird sonst automatisch erzeugt), type: string, required: false }
       - { name: leadText, label: Hinweistext, type: text }
