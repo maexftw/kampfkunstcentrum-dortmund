@@ -174,10 +174,15 @@ content:
             type: object
             list:
               collapsible:
-                summary: "{fields.time} {fields.label}"
+                summary: "{fields.timeStart} {fields.timeEnd} {fields.sessionLabel}"
             fields:
-              - { name: time, label: Uhrzeit, type: string }
-              - { name: label, label: Kurs, type: string }
+              - { name: timeStart, label: Startzeit, type: string }
+              - { name: timeEnd, label: Endzeit, type: string }
+              - { name: discipline, label: Disziplin, type: string }
+              - { name: audience, label: Zielgruppe, type: string }
+              - { name: sessionLabel, label: Kursname, type: string }
+              - { name: time, label: Bestehende Uhrzeit (Legacy), type: string, required: false }
+              - { name: label, label: Legacy Kursname, type: string, required: false }
               - { name: spotsStatus, label: Status, type: string }
               - { name: spotsText, label: Platztext, type: string }
       - { name: leadText, label: Hinweistext, type: text }
