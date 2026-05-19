@@ -1,0 +1,57 @@
+{
+  "siteTitle": "Kampfkunstcentrum Dortmund - Wing Chun & Krav Maga Training | Selbstverteidigung",
+  "siteTagline": "Fachschule für Ving Tsun und Krav Maga",
+  "defaultDescription": "Fachschule für Ving Tsun und Krav Maga in Dortmund. Professionelles Selbstverteidigungstraining für Erwachsene, Frauen und Jugendliche. Kostenloses Probetraining. Sölder Straße 121, 44289 Dortmund.",
+  "email": "Probetraining-Kampfkunstcentrum-Dortmund@web.de",
+  "phoneE164": "",
+  "copyrightYear": 2025,
+  "navigation": [
+    {
+      "label": "Willkommen",
+      "href": "#willkommen"
+    },
+    {
+      "label": "Wing Chun",
+      "href": "#wing-chun"
+    },
+    {
+      "label": "Krav Maga",
+      "href": "#krav-maga"
+    },
+    {
+      "label": "Über mich",
+      "href": "#ueber-mich"
+    },
+    {
+      "label": "Probetraining",
+      "href": "#kontakt"
+    }
+  ],
+  "footer": {
+    "logoText": "KAMPFKUNST DORTMUND",
+    "tagline": "Fachschule für Ving Tsun und Krav Maga",
+    "impressumUrl": "impressum.html",
+    "datenschutzUrl": "datenschutz.html"
+  },
+  "contact": {
+    "emailLabel": "E-Mail:",
+    "emailAddress": "Probetraining-Kampfkunstcentrum-Dortmund@web.de",
+    "emailHref": "mailto:Probetraining-Kampfkunstcentrum-Dortmund@web.de",
+    "addressTitle": "Adresse Kampfkunstschule Dortmund:",
+    "addressLines": [
+      "Kampfkunstcentrum Dortmund",
+      "Sölder Straße 121",
+      "44289 Dortmund Sölde"
+    ],
+    "mapsLabel": "📍 Auf Google Maps anzeigen",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Kampfkunstcentrum+Dortmund+Sölder+Straße+121+44289+Dortmund",
+    "ctaLabel": "Jetzt Probetraining anfragen"
+  },
+  "media": {
+    "heroImage": "https://cdn.prod.website-files.com/68d0fbc61ed599b79a1ed0ff/68d1340227c2f2420ad5628a_Martin-Zingel-1-768x576.jpg.jpeg",
+    "heroImageAlt": "Wing Chun und Krav Maga Training im Kampfkunstcentrum Dortmund - Selbstverteidigungstraining für Erwachsene, Frauen und Jugendliche",
+    "favicon": "/favicon.ico",
+    "appleTouchIcon": "/apple-touch-icon.png",
+    "ogImage": "https://maexftw.github.io/kampfkunstcentrum-dortmund/images/og-image.jpg"
+  }
+}

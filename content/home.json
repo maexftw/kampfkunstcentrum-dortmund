@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "badge": "Fachschule für Ving Tsun und Krav Maga",
+    "title": "Wing Chun & Krav Maga Training in Dortmund",
+    "subtitle": "Traditionelle Kampfkunst und moderne Selbstverteidigung in Dortmund Sölde",
+    "image": "https://cdn.prod.website-files.com/68d0fbc61ed599b79a1ed0ff/68d1340227c2f2420ad5628a_Martin-Zingel-1-768x576.jpg.jpeg",
+    "imageAlt": "Wing Chun und Krav Maga Training im Kampfkunstcentrum Dortmund - Selbstverteidigungstraining für Erwachsene, Frauen und Jugendliche",
+    "primaryCta": {
+      "label": "Probetraining",
+      "anchor": "#kontakt"
+    },
+    "secondaryCta": {
+      "label": "Mehr erfahren",
+      "anchor": "#willkommen"
+    }
+  },
+  "willkommen": {
+    "badge": "Willkommen",
+    "title": "Herzlich Willkommen im Kampfkunstcentrum Dortmund",
+    "description": "Als erfahrene Kampfkunstschule in Dortmund Sölde bieten wir Ihnen professionelles Wing Chun und Krav\n                    Maga Training.\n                    Entdecken Sie, wie diese effektiven Selbstverteidigungssysteme Ihr Leben in Dortmund und Umgebung\n                    verändern können.",
+    "introTitle": "Wenn Sie lernen wollen…",
+    "introPoints": [
+      "in alltäglichen Lebenslagen selbstsicherer aufzutreten",
+      "gelassener auf stressige Situationen zu reagieren",
+      "sich in bedrohlichen Situationen effektiv zu verteidigen",
+      "bewusst im Hier und Jetzt zu sein und sich auf eine Sache zu\n                            konzentrieren"
+    ],
+    "featureBoxTitle": "…dann sind Sie hier genau richtig!",
+    "featureBoxParagraphsHtml": [
+      "Wing Chun und Krav Maga zählen zu den <strong>effektivsten Selbstverteidigungssystemen der\n                            Welt</strong>.",
+      "Die Techniken sind hochwirkungsvoll – dadurch haben selbst körperlich überlegene Gegner keine\n                        Chance.\n                        Beide Systeme eignen sich hervorragend für Frauen, Kinder und Senioren. Als erfahrener Trainer\n                        mit über 25 Jahren\n                        Kampfkunst-Erfahrung weiß ich, dass jeder Mensch – unabhängig von Alter, Größe oder Fitnesslevel\n                        – die Grundlagen\n                        der Selbstverteidigung erlernen kann."
+    ]
+  },
+  "vergleich": {
+    "badge": "Vergleich",
+    "title": "Wing Chun vs. Krav Maga",
+    "description": "Hier sehen Sie auf einen Blick, inwiefern sich Wing Chun und Krav Maga voneinander unterscheiden",
+    "items": [
+      {
+        "icon": "詠春",
+        "name": "WING\n                                CHUN",
+        "anchor": "#wing-chun",
+        "subtitle": "Traditionelle chinesische Kampfkunst",
+        "highlights": [
+          "Erlernen der Grundtechniken: <strong>mindestens 6 Monate</strong>",
+          "Keine sportlichen Voraussetzungen erforderlich",
+          "Komplexes System, dessen Techniken aufeinander aufbauen",
+          "<strong>Reduzierte, effiziente Bewegungen</strong>",
+          "Enthält <strong>meditative Elemente</strong>, die ausgleichend wirken",
+          "Für jedes Alter und Geschlecht geeignet"
+        ]
+      },
+      {
+        "icon": "קרב מגע",
+        "name": "KRAV\n                                MAGA",
+        "anchor": "#krav-maga",
+        "subtitle": "Israelisches Selbstverteidigungssystem",
+        "highlights": [
+          "Erlernen der Grundtechniken: <strong>mindestens 3 Monate</strong>",
+          "<strong>Reines Selbstverteidigungssystem</strong>",
+          "Normale körperliche und psychische Belastbarkeit",
+          "Einfache Techniken basierend auf <strong>natürlichen Reflexen</strong>",
+          "Kampfelemente mit hoher Intensität",
+          "Fitness und Kondition wird nebenbei trainiert"
+        ]
+      }
+    ]
+  },
+  "ueberMich": {
+    "badge": "Trainer",
+    "title": "Über mich",
+    "html": "<h2>Über mich – Oliver Heyden</h2>\n<p>Ich bin <strong>Oliver Heyden</strong>, Kampfkunsttrainer für <strong>Wing Chun</strong> und\n                    <strong>Krav Maga</strong> mit <strong>über 25 Jahren Erfahrung</strong>. In meinem Unterricht\n                    vermittle ich Werte wie <strong>Respekt</strong>, <strong>Zusammenhalt</strong> und\n                    <strong>Vertrauen</strong> – in einer familiären Atmosphäre, in der du abschalten und Stress abbauen\n                    kannst.</p>\n<blockquote>„Kampfkunst ist mehr als nur kämpfen.\"</blockquote>\n Werte & Philosophie \n<h2>Werte &amp; Trainingsphilosophie</h2>\n<ul>\n<li><strong>Respekt &amp; Vertrauen:</strong> Ein sicheres Umfeld, in dem Lernen Spaß macht.</li>\n<li><strong>Gemeinschaft:</strong> Wir wachsen im Team – voneinander und miteinander.</li>\n<li><strong>Ganzheitlicher Blick:</strong> Technik, Haltung und Persönlichkeit gehören zusammen.\n                    </li>\n</ul>\n<p>Du entwickelst ein gesundes Selbstwertgefühl und gehst mit jeder Einheit gefestigt in deinen Alltag.\n                </p>\n Was mich als Trainer auszeichnet \n<h2>Was mich als Trainer auszeichnet</h2>\n<p>Für mich steht der <strong>Mensch</strong> im Mittelpunkt. Zu sehen, wie sich jede einzelne Person\n                    weiterentwickelt, ist mein größter Antrieb. Ich gebe nicht nur technische Tipps, sondern begleite\n                    meine Schüler ganzheitlich – auch für <em>emotionale Themen</em> habe ich ein offenes Ohr.</p>\n<blockquote>„Ich bin ein Trainer mit Herz, Hirn und Humor.\"</blockquote>\n Erfahrung \n<h2>Erfahrung</h2>\n<p>Die wertvollste Qualifikation ist meine langjährige Praxis: <strong>&gt; 25 Jahre</strong> in\n                    verschiedenen Kampfkünsten und Kampfsportarten.</p>\n Werdegang \n<h2>Wie alles begann …</h2>\n<p>Mein Onkel war <strong>Vize-Landesmeister im Karate</strong> und nahm mich zu Wettkämpfen und ins\n                    Training mit. Begeistert begann ich – zunächst heimlich – mit einem Freund im Keller <strong>Taek\n                        Won Do</strong> zu trainieren. Das stärkte mein Selbstbewusstsein und hatte positive Effekte in\n                    der Schule.</p>\n Faszination \n<h2>Warum mich Kampfkunst fasziniert</h2>\n<p>Unsere digitale Welt ist schnelllebig. <strong>Kampfkunst</strong> ist für mich ein Gegenpol: Sie\n                    vermittelt <strong>Zusammenhalt</strong>, <strong>Respekt</strong> und <strong>Fokus</strong>.\n                    Besonders durch <strong>Wing Chun</strong> fühle ich mich ausgeglichener und konzentrierter, setze\n                    andere Prioritäten und schaue nicht mehr ständig aufs Handy.</p>\n Lieblingsmoment \n<h2>Mein schönster Moment als Trainer</h2>\n<p>Nach meinem ersten Kindertraining in der Schule von Großmeister <strong>Dirk Eiringhaus</strong> in\n                    Duisburg kamen zwei Kinder zu mir, umarmten mich und sagten: <em>„Danke Olli, ich hab dich\n                        lieb!\"</em></p>\n Atmosphäre \n<h2>Training &amp; Atmosphäre</h2>\n<ul>\n<li><strong>Familiäres Umfeld:</strong> motivierend, wertschätzend, sicher.</li>\n<li><strong>Persönlichkeitsentwicklung:</strong> Selbstbewusstsein &amp; mentale Stärke.</li>\n<li><strong>Praxisfokus:</strong> Anwendbare Techniken für Alltagssituationen.</li>\n</ul>"
+  },
+  "cta": {
+    "title": "Werden auch Sie Teil unserer Familie",
+    "text": "Melden Sie sich zum Probetraining an. Wir freuen uns auf Ihren Besuch.",
+    "buttonLabel": "Jetzt Probetraining vereinbaren",
+    "buttonHref": "#kontakt"
+  },
+  "kontakt": {
+    "badge": "Kontakt",
+    "title": "Probetraining",
+    "description": "Nehmen Sie Kontakt mit uns auf und vereinbaren Sie Ihr Probetraining"
+  },
+  "footer": {
+    "logoText": "KAMPFKUNST DORTMUND",
+    "tagline": "Fachschule für Ving Tsun und Krav Maga",
+    "impressumUrl": "impressum.html",
+    "datenschutzUrl": "datenschutz.html"
+  }
+}
