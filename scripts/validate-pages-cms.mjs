@@ -12,6 +12,7 @@ const jsonFiles = [
 const allowedSchemes = /^(#|\/|\.\/|\.\.\/|https?:\/\/|mailto:|tel:)/i;
 const dangerousSchemes = /^(javascript|data|vbscript):/i;
 const hrefLikeKeys = /(?:href|url|anchor)$/i;
+const allowedSpotStatuses = new Set(['frei', 'warteliste', 'ausgebucht', 'voll']);
 
 const load = (rel) => JSON.parse(fs.readFileSync(path.join(root, rel), 'utf8'));
 const failures = [];
@@ -45,9 +46,16 @@ if (!Array.isArray(training.days) || training.days.length < 4) failures.push('tr
 for (const [dayIndex, day] of (training.days || []).entries()) {
   if (!Array.isArray(day.sessions) || day.sessions.length === 0) failures.push(`training.days[${dayIndex}] has no sessions`);
   for (const [sessionIndex, session] of (day.sessions || []).entries()) {
-    for (const field of ['timeStart', 'timeEnd', 'sessionLabel', 'spotsStatus', 'spotsText']) {
-      if (!session[field]) failures.push(`training.days[${dayIndex}].sessions[${sessionIndex}] missing ${field}`);
+    const trail = `training.days[${dayIndex}].sessions[${sessionIndex}]`;
+    for (const field of ['timeStart', 'timeEnd', 'sessionLabel', 'spotsStatus']) {
+      if (!session[field]) failures.push(`${trail} missing ${field}`);
     }
+
+    const status = String(session.spotsStatus || '').trim().toLowerCase();
+    const spotsAvailable = Number(session.spotsAvailable);
+    if (!allowedSpotStatuses.has(status)) failures.push(`${trail} has unknown spotsStatus: ${session.spotsStatus}`);
+    if (status === 'frei' && (!Number.isFinite(spotsAvailable) || spotsAvailable <= 0)) failures.push(`${trail} with spotsStatus=frei must have spotsAvailable greater than 0`);
+    if ((status === 'warteliste' || status === 'ausgebucht' || status === 'voll') && Number.isFinite(spotsAvailable) && spotsAvailable > 0) failures.push(`${trail} is marked full/waitlist but has spotsAvailable greater than 0`);
   }
 }
 

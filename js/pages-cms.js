@@ -251,12 +251,41 @@
     return [time, label].filter(Boolean).join(' — ');
   }
 
+  function normalizeAvailabilityStatus(session) {
+    const status = String(session.spotsStatus || '').trim().toLowerCase();
+    const available = Number(session.spotsAvailable);
+
+    if (status === 'warteliste' || status === 'ausgebucht' || status === 'voll') {
+      return status === 'ausgebucht' ? 'ausgebucht' : 'warteliste';
+    }
+
+    if (Number.isFinite(available) && available <= 0) return 'warteliste';
+    return 'frei';
+  }
+
+  function formatAvailabilityLabel(session) {
+    const status = normalizeAvailabilityStatus(session);
+    if (status === 'ausgebucht') return 'Ausgebucht';
+    if (status === 'warteliste') return 'Ausgebucht / Warteliste';
+
+    const available = Number(session.spotsAvailable);
+    if (Number.isFinite(available) && available > 0) {
+      return `${available} ${available === 1 ? 'Platz' : 'Plätze'} frei`;
+    }
+
+    return session.spotsText?.trim() || 'Plätze frei';
+  }
+
+  function availabilityClass(session) {
+    return normalizeAvailabilityStatus(session) === 'frei' ? 'spot-free' : 'spot-full';
+  }
+
   function renderTraining(training) {
     setText('#trainingszeiten .section-badge', training.badge);
     setText('#trainingszeiten .section-title', training.title);
     const grid = document.querySelector('#trainingszeiten .schedule-grid');
     if (grid && Array.isArray(training.days)) {
-      grid.innerHTML = training.days.map((day) => `<div class="schedule-day" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"><h3 style="color: var(--primary); font-family: 'Oswald', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--gray-light); padding-bottom: 0.5rem;">${escapeHtml(day.day)}</h3>${(day.sessions || []).map((session, index, sessions) => `<div class="schedule-item" style="${index < sessions.length - 1 ? 'margin-bottom: 1rem; ' : ''}display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;"><div><strong>${escapeHtml(formatScheduleSession(session))}</strong></div><span class="spot-badge ${session.spotsStatus === 'voll' || session.spotsStatus === 'warteliste' ? 'spot-full' : 'spot-free'}">${escapeHtml(session.spotsText)}</span></div>`).join('')}</div>`).join('');
+      grid.innerHTML = training.days.map((day) => `<div class="schedule-day" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"><h3 style="color: var(--primary); font-family: 'Oswald', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--gray-light); padding-bottom: 0.5rem;">${escapeHtml(day.day)}</h3>${(day.sessions || []).map((session, index, sessions) => `<div class="schedule-item" style="${index < sessions.length - 1 ? 'margin-bottom: 1rem; ' : ''}display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;"><div><strong>${escapeHtml(formatScheduleSession(session))}</strong></div><span class="spot-badge ${availabilityClass(session)}">${escapeHtml(formatAvailabilityLabel(session))}</span></div>`).join('')}</div>`).join('');
     }
 
     const footer = document.querySelector('#trainingszeiten .container > div[style*="text-align: center"]');

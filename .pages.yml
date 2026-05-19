@@ -183,8 +183,16 @@ content:
               - { name: sessionLabel, label: Kursname, type: string }
               - { name: time, label: Bestehende Uhrzeit (Legacy), type: string, required: false }
               - { name: label, label: Legacy Kursname, type: string, required: false }
-              - { name: spotsStatus, label: Status, type: string }
-              - { name: spotsText, label: Platztext, type: string }
+              - name: spotsStatus
+                label: Verfügbarkeit
+                type: select
+                default: frei
+                options:
+                  - { label: "Plätze frei", value: "frei" }
+                  - { label: "Ausgebucht / Warteliste", value: "warteliste" }
+                  - { label: "Ausgebucht", value: "ausgebucht" }
+              - { name: spotsAvailable, label: Freie Plätze (nur bei „Plätze frei“), type: number, required: false }
+              - { name: spotsText, label: Platztext (optional, wird sonst automatisch erzeugt), type: string, required: false }
       - { name: leadText, label: Hinweistext, type: text }
       - { name: availabilityNote, label: Stand/Hinweis, type: string }
       - { name: ctaLabel, label: Button Text, type: string }
