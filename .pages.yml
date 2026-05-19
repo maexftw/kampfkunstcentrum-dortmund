@@ -1,0 +1,189 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: site
+    label: Website Einstellungen
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: siteTitle, label: Seitentitel, type: string }
+      - { name: siteTagline, label: Claim, type: string }
+      - { name: defaultDescription, label: Meta Beschreibung, type: text }
+      - { name: email, label: E-Mail, type: string }
+      - { name: phoneE164, label: Telefon E.164, type: string, required: false }
+      - { name: copyrightYear, label: Copyright Jahr, type: number }
+      - name: navigation
+        label: Navigation
+        type: object
+        list:
+          collapsible:
+            summary: "{fields.label}"
+        fields:
+          - { name: label, label: Beschriftung, type: string }
+          - { name: href, label: Link/Anker, type: string }
+      - name: contact
+        label: Kontakt
+        type: object
+        fields:
+          - { name: emailLabel, label: E-Mail Label, type: string }
+          - { name: emailAddress, label: E-Mail Adresse, type: string }
+          - { name: emailHref, label: E-Mail Link, type: string }
+          - { name: addressTitle, label: Adress-Überschrift, type: string }
+          - { name: addressLines, label: Adresszeilen, type: string, list: true }
+          - { name: mapsLabel, label: Maps Link Text, type: string }
+          - { name: mapsUrl, label: Maps URL, type: string }
+          - { name: ctaLabel, label: Kontakt Button, type: string }
+      - name: media
+        label: Medien
+        type: object
+        fields:
+          - { name: heroImage, label: Hero Bild, type: image }
+          - { name: heroImageAlt, label: Hero Bild Alt-Text, type: string }
+          - { name: favicon, label: Favicon Pfad, type: image, required: false }
+          - { name: appleTouchIcon, label: Apple Touch Icon, type: image, required: false }
+          - { name: ogImage, label: Open Graph Bild, type: image, required: false }
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - { name: logoText, label: Footer Logo Text, type: string }
+          - { name: tagline, label: Footer Claim, type: string }
+          - { name: impressumUrl, label: Impressum URL, type: string }
+          - { name: datenschutzUrl, label: Datenschutz URL, type: string }
+
+  - name: home
+    label: Startseite Inhalte
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: badge, label: Badge, type: string }
+          - { name: title, label: Titel, type: string }
+          - { name: subtitle, label: Untertitel, type: text }
+          - { name: image, label: Bild, type: image }
+          - { name: imageAlt, label: Bild Alt-Text, type: string }
+          - name: primaryCta
+            label: Primärer Button
+            type: object
+            fields:
+              - { name: label, label: Text, type: string }
+              - { name: anchor, label: Link/Anker, type: string }
+          - name: secondaryCta
+            label: Sekundärer Button
+            type: object
+            fields:
+              - { name: label, label: Text, type: string }
+              - { name: anchor, label: Link/Anker, type: string }
+      - name: willkommen
+        label: Willkommen
+        type: object
+        fields:
+          - { name: badge, label: Badge, type: string }
+          - { name: title, label: Titel, type: string }
+          - { name: description, label: Beschreibung, type: text }
+          - { name: introTitle, label: Intro Überschrift, type: string }
+          - { name: introPoints, label: Intro Punkte, type: string, list: true }
+          - { name: featureBoxTitle, label: Box Titel, type: string }
+          - { name: featureBoxParagraphsHtml, label: Box Absätze HTML, type: text, list: true }
+      - name: vergleich
+        label: Vergleich
+        type: object
+        fields:
+          - { name: badge, label: Badge, type: string }
+          - { name: title, label: Titel, type: string }
+          - { name: description, label: Beschreibung, type: text }
+          - name: items
+            label: Vergleichskarten
+            type: object
+            list:
+              collapsible:
+                summary: "{fields.name}"
+            fields:
+              - { name: icon, label: Icon/Text, type: string }
+              - { name: name, label: Name, type: string }
+              - { name: anchor, label: Link/Anker, type: string }
+              - { name: subtitle, label: Untertitel, type: string }
+              - { name: highlights, label: Bullet HTML, type: text, list: true }
+      - name: ueberMich
+        label: Über mich
+        type: object
+        fields:
+          - { name: badge, label: Badge, type: string }
+          - { name: title, label: Titel, type: string }
+          - { name: html, label: Inhalt HTML, type: text }
+      - name: cta
+        label: CTA
+        type: object
+        fields:
+          - { name: title, label: Titel, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: buttonLabel, label: Button Text, type: string }
+          - { name: buttonHref, label: Button Link, type: string }
+      - name: kontakt
+        label: Kontakt Intro
+        type: object
+        fields:
+          - { name: badge, label: Badge, type: string }
+          - { name: title, label: Titel, type: string }
+          - { name: description, label: Beschreibung, type: text }
+
+  - name: programs
+    label: Angebote / Programme
+    type: file
+    path: content/programs.json
+    format: json
+    fields:
+      - name: items
+        label: Programme
+        type: object
+        list:
+          collapsible:
+            summary: "{fields.title}"
+        fields:
+          - { name: title, label: Titel, type: string }
+          - { name: slug, label: Slug, type: string }
+          - { name: anchorId, label: Seitenanker, type: string }
+          - { name: badge, label: Badge, type: string }
+          - { name: html, label: Inhalt HTML, type: text }
+
+  - name: trainingTimes
+    label: Trainingszeiten
+    type: file
+    path: content/training-times.json
+    format: json
+    fields:
+      - { name: badge, label: Badge, type: string }
+      - { name: title, label: Titel, type: string }
+      - name: days
+        label: Tage
+        type: object
+        list:
+          collapsible:
+            summary: "{fields.day}"
+        fields:
+          - { name: day, label: Tag, type: string }
+          - name: sessions
+            label: Einheiten
+            type: object
+            list:
+              collapsible:
+                summary: "{fields.time} {fields.label}"
+            fields:
+              - { name: time, label: Uhrzeit, type: string }
+              - { name: label, label: Kurs, type: string }
+              - { name: spotsStatus, label: Status, type: string }
+              - { name: spotsText, label: Platztext, type: string }
+      - { name: leadText, label: Hinweistext, type: text }
+      - { name: availabilityNote, label: Stand/Hinweis, type: string }
+      - { name: ctaLabel, label: Button Text, type: string }
+      - { name: ctaHref, label: Button Link, type: string }
+
+settings:
+  hide: true

@@ -9,7 +9,7 @@
   - offers/programs
   - contact info
   - images
-- SEO is optional and out of scope for first pass.
+- SEO is optional and out of scope for first pass. No SEO-related fields (including any `seo_toggle`) are exposed in CMS in phase 1.
 - `live-site.html` is considered a source-of-truth variant; implementation target is the repository current files.
 - This document is the authoritative first-pass CMS acceptance contract for the Pages CMS integration branch.
 
@@ -25,7 +25,6 @@ Global site values
 - `hero_title` (string)
 - `hero_subtitle` (string)
 - `copyright_year` (int)
-- `seo_toggle` (enum: required/optional) for first pass
 
 ### 2) `hero`
 - `hero_image.url`
@@ -153,6 +152,7 @@ Client-ready:
 
 ## Open decisions for unblock
 - Resolved for phase one: `impressum.html` and `datenschutz.html` stay static and are intentionally excluded from CMS control unless the client explicitly asks later.
+- Resolved: `seo_toggle` is intentionally **not** part of phase-1 CMS schema; any SEO controls remain out-of-scope.
 
 ## Kanban execution graph
 

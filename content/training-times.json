@@ -1,0 +1,102 @@
+{
+  "badge": "Zeitplan & Kapazitäten",
+  "title": "Trainingszeiten & freie Plätze",
+  "days": [
+    {
+      "day": "Montag",
+      "sessions": [
+        {
+          "time": "17:15 – 18:00 Uhr",
+          "label": "Wing Chun Kids (ab 6 – 12 Jahre)",
+          "spotsText": "2 Plätze frei",
+          "spotsStatus": "frei"
+        },
+        {
+          "time": "18:15 – 19:15 Uhr",
+          "label": "Wing Chun (ab 18 Jahre / Erwachsene)",
+          "spotsText": "1 Platz frei",
+          "spotsStatus": "frei"
+        }
+      ]
+    },
+    {
+      "day": "Dienstag",
+      "sessions": [
+        {
+          "time": "17:15 – 18:00 Uhr",
+          "label": "Krav Maga Kids (ab 6 – 10 Jahre)",
+          "spotsText": "2 Plätze frei",
+          "spotsStatus": "frei"
+        },
+        {
+          "time": "18:15 – 19:00 Uhr",
+          "label": "Krav Maga Teens (ab 11 – 14 Jahre)",
+          "spotsText": "2 Plätze frei",
+          "spotsStatus": "frei"
+        },
+        {
+          "time": "19:15 – 20:15 Uhr",
+          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "spotsText": "Ausgebucht / Warteliste",
+          "spotsStatus": "voll"
+        },
+        {
+          "time": "20:30 – 21:30 Uhr",
+          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "spotsText": "Ausgebucht / Warteliste",
+          "spotsStatus": "voll"
+        }
+      ]
+    },
+    {
+      "day": "Mittwoch",
+      "sessions": [
+        {
+          "time": "17:15 – 18:00 Uhr",
+          "label": "Wing Chun Kids (ab 6 – 12 Jahre)",
+          "spotsText": "2 Plätze frei",
+          "spotsStatus": "frei"
+        },
+        {
+          "time": "18:15 – 19:15 Uhr",
+          "label": "Wing Chun (ab 18 Jahre / Erwachsene)",
+          "spotsText": "1 Platz frei",
+          "spotsStatus": "frei"
+        }
+      ]
+    },
+    {
+      "day": "Donnerstag",
+      "sessions": [
+        {
+          "time": "17:15 – 18:00 Uhr",
+          "label": "Krav Maga Kids (ab 6 – 10 Jahre)",
+          "spotsText": "2 Plätze frei",
+          "spotsStatus": "frei"
+        },
+        {
+          "time": "18:15 – 19:00 Uhr",
+          "label": "Krav Maga Teens (ab 11 – 14 Jahre)",
+          "spotsText": "2 Plätze frei",
+          "spotsStatus": "frei"
+        },
+        {
+          "time": "19:15 – 20:15 Uhr",
+          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "spotsText": "Ausgebucht / Warteliste",
+          "spotsStatus": "voll"
+        },
+        {
+          "time": "20:30 – 21:30 Uhr",
+          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "spotsText": "Ausgebucht / Warteliste",
+          "spotsStatus": "voll"
+        }
+      ]
+    }
+  ],
+  "leadText": "Interesse an einem Probetraining in einem Kurs mit freien Plätzen?",
+  "availabilityNote": "Stand: März 2026. Sichern Sie sich jetzt Ihren Platz!",
+  "ctaLabel": "Jetzt Probetraining vereinbaren",
+  "ctaHref": "#kontakt"
+}
