@@ -6,28 +6,28 @@
       "day": "Montag",
       "sessions": [
         {
-          "time": "17:15 – 18:00 Uhr",
-          "label": "Wing Chun Kids (ab 6 – 12 Jahre)",
-          "spotsText": "2 Plätze frei",
-          "spotsStatus": "frei",
           "timeStart": "17:15",
           "timeEnd": "18:00 Uhr",
-          "sessionLabel": "Wing Chun Kids (ab 6 – 12 Jahre)",
           "discipline": "Wing Chun",
           "audience": "Kids",
-          "spotsAvailable": 2
+          "sessionLabel": "Wing Chun Kids (ab 6 – 12 Jahre)",
+          "time": "17:15 – 18:00 Uhr",
+          "label": "Wing Chun Kids (ab 6 – 12 Jahre)",
+          "spotsStatus": "frei",
+          "spotsAvailable": 1,
+          "spotsText": "2 Plätze frei"
         },
         {
-          "time": "18:15 – 19:15 Uhr",
-          "label": "Wing Chun (ab 18 Jahre / Erwachsene)",
-          "spotsText": "1 Platz frei",
-          "spotsStatus": "frei",
           "timeStart": "18:15",
           "timeEnd": "19:15 Uhr",
-          "sessionLabel": "Wing Chun (ab 18 Jahre / Erwachsene)",
           "discipline": "Wing Chun",
           "audience": "Erwachsene",
-          "spotsAvailable": 1
+          "sessionLabel": "Wing Chun (ab 18 Jahre / Erwachsene)",
+          "time": "18:15 – 19:15 Uhr",
+          "label": "Wing Chun (ab 18 Jahre / Erwachsene)",
+          "spotsStatus": "warteliste",
+          "spotsAvailable": 0,
+          "spotsText": "1 Platz frei"
         }
       ]
     },
@@ -35,52 +35,52 @@
       "day": "Dienstag",
       "sessions": [
         {
-          "time": "17:15 – 18:00 Uhr",
-          "label": "Krav Maga Kids (ab 6 – 10 Jahre)",
-          "spotsText": "2 Plätze frei",
-          "spotsStatus": "frei",
           "timeStart": "17:15",
           "timeEnd": "18:00 Uhr",
-          "sessionLabel": "Krav Maga Kids (ab 6 – 10 Jahre)",
           "discipline": "Krav Maga",
           "audience": "Kids",
-          "spotsAvailable": 2
+          "sessionLabel": "Krav Maga Kids (ab 6 – 10 Jahre)",
+          "time": "17:15 – 18:00 Uhr",
+          "label": "Krav Maga Kids (ab 6 – 10 Jahre)",
+          "spotsStatus": "frei",
+          "spotsAvailable": 2,
+          "spotsText": "2 Plätze frei"
         },
         {
-          "time": "18:15 – 19:00 Uhr",
-          "label": "Krav Maga Teens (ab 11 – 14 Jahre)",
-          "spotsText": "2 Plätze frei",
-          "spotsStatus": "frei",
           "timeStart": "18:15",
           "timeEnd": "19:00 Uhr",
-          "sessionLabel": "Krav Maga Teens (ab 11 – 14 Jahre)",
           "discipline": "Krav Maga",
           "audience": "Teens",
-          "spotsAvailable": 2
+          "sessionLabel": "Krav Maga Teens (ab 11 – 14 Jahre)",
+          "time": "18:15 – 19:00 Uhr",
+          "label": "Krav Maga Teens (ab 11 – 14 Jahre)",
+          "spotsStatus": "frei",
+          "spotsAvailable": 2,
+          "spotsText": "2 Plätze frei"
         },
         {
-          "time": "19:15 – 20:15 Uhr",
-          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
-          "spotsText": "Ausgebucht / Warteliste",
-          "spotsStatus": "warteliste",
           "timeStart": "19:15",
           "timeEnd": "20:15 Uhr",
-          "sessionLabel": "Krav Maga (ab 18 Jahre / Erwachsene)",
           "discipline": "Krav Maga",
           "audience": "Erwachsene",
-          "spotsAvailable": 0
+          "sessionLabel": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "time": "19:15 – 20:15 Uhr",
+          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "spotsStatus": "frei",
+          "spotsAvailable": 1,
+          "spotsText": "Ausgebucht / Warteliste"
         },
         {
-          "time": "20:30 – 21:30 Uhr",
-          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
-          "spotsText": "Ausgebucht / Warteliste",
-          "spotsStatus": "warteliste",
           "timeStart": "20:30",
           "timeEnd": "21:30 Uhr",
-          "sessionLabel": "Krav Maga (ab 18 Jahre / Erwachsene)",
           "discipline": "Krav Maga",
           "audience": "Erwachsene",
-          "spotsAvailable": 0
+          "sessionLabel": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "time": "20:30 – 21:30 Uhr",
+          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "spotsStatus": "warteliste",
+          "spotsAvailable": 0,
+          "spotsText": "Ausgebucht / Warteliste"
         }
       ]
     },
@@ -88,28 +88,28 @@
       "day": "Mittwoch",
       "sessions": [
         {
-          "time": "17:15 – 18:00 Uhr",
-          "label": "Wing Chun Kids (ab 6 – 12 Jahre)",
-          "spotsText": "2 Plätze frei",
-          "spotsStatus": "frei",
           "timeStart": "17:15",
           "timeEnd": "18:00 Uhr",
-          "sessionLabel": "Wing Chun Kids (ab 6 – 12 Jahre)",
           "discipline": "Wing Chun",
           "audience": "Kids",
-          "spotsAvailable": 2
+          "sessionLabel": "Wing Chun Kids (ab 6 – 12 Jahre)",
+          "time": "17:15 – 18:00 Uhr",
+          "label": "Wing Chun Kids (ab 6 – 12 Jahre)",
+          "spotsStatus": "warteliste",
+          "spotsAvailable": 0,
+          "spotsText": "2 Plätze frei"
         },
         {
-          "time": "18:15 – 19:15 Uhr",
-          "label": "Wing Chun (ab 18 Jahre / Erwachsene)",
-          "spotsText": "1 Platz frei",
-          "spotsStatus": "frei",
           "timeStart": "18:15",
           "timeEnd": "19:15 Uhr",
-          "sessionLabel": "Wing Chun (ab 18 Jahre / Erwachsene)",
           "discipline": "Wing Chun",
           "audience": "Erwachsene",
-          "spotsAvailable": 1
+          "sessionLabel": "Wing Chun (ab 18 Jahre / Erwachsene)",
+          "time": "18:15 – 19:15 Uhr",
+          "label": "Wing Chun (ab 18 Jahre / Erwachsene)",
+          "spotsStatus": "warteliste",
+          "spotsAvailable": 0,
+          "spotsText": "1 Platz frei"
         }
       ]
     },
@@ -117,58 +117,58 @@
       "day": "Donnerstag",
       "sessions": [
         {
-          "time": "17:15 – 18:00 Uhr",
-          "label": "Krav Maga Kids (ab 6 – 10 Jahre)",
-          "spotsText": "2 Plätze frei",
-          "spotsStatus": "frei",
           "timeStart": "17:15",
           "timeEnd": "18:00 Uhr",
-          "sessionLabel": "Krav Maga Kids (ab 6 – 10 Jahre)",
           "discipline": "Krav Maga",
           "audience": "Kids",
-          "spotsAvailable": 2
+          "sessionLabel": "Krav Maga Kids (ab 6 – 10 Jahre)",
+          "time": "17:15 – 18:00 Uhr",
+          "label": "Krav Maga Kids (ab 6 – 10 Jahre)",
+          "spotsStatus": "frei",
+          "spotsAvailable": 2,
+          "spotsText": "2 Plätze frei"
         },
         {
-          "time": "18:15 – 19:00 Uhr",
-          "label": "Krav Maga Teens (ab 11 – 14 Jahre)",
-          "spotsText": "2 Plätze frei",
-          "spotsStatus": "frei",
           "timeStart": "18:15",
           "timeEnd": "19:00 Uhr",
-          "sessionLabel": "Krav Maga Teens (ab 11 – 14 Jahre)",
           "discipline": "Krav Maga",
           "audience": "Teens",
-          "spotsAvailable": 2
+          "sessionLabel": "Krav Maga Teens (ab 11 – 14 Jahre)",
+          "time": "18:15 – 19:00 Uhr",
+          "label": "Krav Maga Teens (ab 11 – 14 Jahre)",
+          "spotsStatus": "frei",
+          "spotsAvailable": 2,
+          "spotsText": "2 Plätze frei"
         },
         {
-          "time": "19:15 – 20:15 Uhr",
-          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
-          "spotsText": "Ausgebucht / Warteliste",
-          "spotsStatus": "warteliste",
           "timeStart": "19:15",
           "timeEnd": "20:15 Uhr",
-          "sessionLabel": "Krav Maga (ab 18 Jahre / Erwachsene)",
           "discipline": "Krav Maga",
           "audience": "Erwachsene",
-          "spotsAvailable": 0
+          "sessionLabel": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "time": "19:15 – 20:15 Uhr",
+          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "spotsStatus": "frei",
+          "spotsAvailable": 1,
+          "spotsText": "Ausgebucht / Warteliste"
         },
         {
-          "time": "20:30 – 21:30 Uhr",
-          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
-          "spotsText": "Ausgebucht / Warteliste",
-          "spotsStatus": "warteliste",
           "timeStart": "20:30",
           "timeEnd": "21:30 Uhr",
-          "sessionLabel": "Krav Maga (ab 18 Jahre / Erwachsene)",
           "discipline": "Krav Maga",
           "audience": "Erwachsene",
-          "spotsAvailable": 0
+          "sessionLabel": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "time": "20:30 – 21:30 Uhr",
+          "label": "Krav Maga (ab 18 Jahre / Erwachsene)",
+          "spotsStatus": "warteliste",
+          "spotsAvailable": 0,
+          "spotsText": "Ausgebucht / Warteliste"
         }
       ]
     }
   ],
   "leadText": "Interesse an einem Probetraining in einem Kurs mit freien Plätzen?",
-  "availabilityNote": "Stand: März 2026. Sichern Sie sich jetzt Ihren Platz!",
+  "availabilityNote": "Stand: Mai 2026. Sichern Sie sich jetzt Ihren Platz!",
   "ctaLabel": "Jetzt Probetraining vereinbaren",
   "ctaHref": "#kontakt"
 }
