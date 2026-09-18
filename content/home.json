@@ -1,10 +1,10 @@
 {
   "hero": {
     "badge": "Fachschule für Ving Tsun und Krav Maga",
-    "title": "Wing Chun & Krav Maga Training in Dortmund",
+    "title": "Ving Tsun & Krav Maga Training in Dortmund",
     "subtitle": "Traditionelle Kampfkunst und moderne Selbstverteidigung in Dortmund Sölde",
     "image": "https://cdn.prod.website-files.com/68d0fbc61ed599b79a1ed0ff/68d1340227c2f2420ad5628a_Martin-Zingel-1-768x576.jpg.jpeg",
-    "imageAlt": "Wing Chun und Krav Maga Training im Kampfkunstcentrum Dortmund - Selbstverteidigungstraining für Erwachsene, Frauen und Jugendliche",
+    "imageAlt": "Ving Tsun und Krav Maga Training im Kampfkunstcentrum Dortmund - Selbstverteidigungstraining für Erwachsene, Frauen und Jugendliche",
     "primaryCta": {
       "label": "Probetraining",
       "anchor": "#kontakt"
@@ -17,7 +17,7 @@
   "willkommen": {
     "badge": "Willkommen",
     "title": "Herzlich Willkommen im Kampfkunstcentrum Dortmund",
-    "description": "Als erfahrene Kampfkunstschule in Dortmund Sölde bieten wir Ihnen professionelles Wing Chun und Krav\n                    Maga Training.\n                    Entdecken Sie, wie diese effektiven Selbstverteidigungssysteme Ihr Leben in Dortmund und Umgebung\n                    verändern können.",
+    "description": "Als erfahrene Kampfkunstschule in Dortmund Sölde bieten wir Ihnen professionelles Ving Tsun und Krav\n                    Maga Training.\n                    Entdecken Sie, wie diese effektiven Selbstverteidigungssysteme Ihr Leben in Dortmund und Umgebung\n                    verändern können.",
     "introTitle": "Wenn Sie lernen wollen…",
     "introPoints": [
       "in alltäglichen Lebenslagen selbstsicherer aufzutreten",
@@ -27,19 +27,19 @@
     ],
     "featureBoxTitle": "…dann sind Sie hier genau richtig!",
     "featureBoxParagraphsHtml": [
-      "Wing Chun und Krav Maga zählen zu den <strong>effektivsten Selbstverteidigungssystemen der\n                            Welt</strong>.",
+      "Ving Tsun und Krav Maga zählen zu den <strong>effektivsten Selbstverteidigungssystemen der\n                            Welt</strong>.",
       "Die Techniken sind hochwirkungsvoll – dadurch haben selbst körperlich überlegene Gegner keine\n                        Chance.\n                        Beide Systeme eignen sich hervorragend für Frauen, Kinder und Senioren. Als erfahrener Trainer\n                        mit über 25 Jahren\n                        Kampfkunst-Erfahrung weiß ich, dass jeder Mensch – unabhängig von Alter, Größe oder Fitnesslevel\n                        – die Grundlagen\n                        der Selbstverteidigung erlernen kann."
     ]
   },
   "vergleich": {
     "badge": "Vergleich",
-    "title": "Wing Chun vs. Krav Maga",
-    "description": "Hier sehen Sie auf einen Blick, inwiefern sich Wing Chun und Krav Maga voneinander unterscheiden",
+    "title": "Ving Tsun vs. Krav Maga",
+    "description": "Hier sehen Sie auf einen Blick, inwiefern sich Ving Tsun und Krav Maga voneinander unterscheiden",
     "items": [
       {
         "icon": "詠春",
-        "name": "WING\n                                CHUN",
-        "anchor": "#wing-chun",
+        "name": "VING                                TSUN",
+        "anchor": "#ving-tsun",
         "subtitle": "Traditionelle chinesische Kampfkunst",
         "highlights": [
           "Erlernen der Grundtechniken: <strong>mindestens 6 Monate</strong>",
@@ -81,11 +81,5 @@
     "badge": "Kontakt",
     "title": "Probetraining",
     "description": "Nehmen Sie Kontakt mit uns auf und vereinbaren Sie Ihr Probetraining"
-  },
-  "footer": {
-    "logoText": "KAMPFKUNST DORTMUND",
-    "tagline": "Fachschule für Ving Tsun und Krav Maga",
-    "impressumUrl": "impressum.html",
-    "datenschutzUrl": "datenschutz.html"
   }
 }
